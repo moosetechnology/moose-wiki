@@ -5,7 +5,7 @@ A wiki gathering documentation related to Moose project.
 ## Contents
 
 - [Beginners](#Beginners)
-- [Create your own model](#Create your own model)
+- [Create your own model](#Create-your-own-model)
 
 ## Beginners
 
