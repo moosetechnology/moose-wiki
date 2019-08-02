@@ -5,4 +5,5 @@ Moose is an extensive platform for software and data analysis. It offers multipl
 The following resources are useful for understanding Moose:
 
 - [Moose Technology](http://moosetechnology.org/) - the main web site for Moose.
-- [The Moose Book](http://themoosebook.org/) - a tutorial for using Moose to analyze Java source code (Moose 6). 
+- [The Moose Book](http://themoosebook.org/) - a tutorial for using Moose to analyze Java source code (Moose 6).
+- [Famix NG](https://www.slideshare.net/JulienDelp/famix-nextgeneration) - presentation of Famix generator
