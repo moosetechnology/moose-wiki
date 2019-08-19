@@ -2,17 +2,16 @@
 
 A wiki gathering documentation related to Moose project.
 
-## Contents
+## Contents  <!-- omit in toc -->
 
-- [Contents](#contents)
-- [Beginners](#beginners)
-- [General](#general)
-- [Moose Projects](#moose-projects)
-- [Other Documentation](#other-documentation)
+- [Beginners](#Beginners)
+- [General](#General)
+- [Moose Projects](#Moose-Projects)
+- [Other Documentation](#Other-Documentation)
 
 ## Beginners
 
-- [Install Moose](Beginners/InstallMoose.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Install Moose](Beginners/InstallMoose.md)
 
 ## General
 
