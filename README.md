@@ -7,6 +7,7 @@ A wiki gathering documentation related to Moose project.
 - [Beginners](#Beginners)
 - [General](#General)
 - [Moose Projects](#Moose-Projects)
+  - [Famix Parser](#Famix-Parser)
 - [Other Documentation](#Other-Documentation)
 
 ## Beginners
@@ -16,10 +17,17 @@ A wiki gathering documentation related to Moose project.
 ## General
 
 - [Define baseline loading moose](General/DefineBaselineLoadingMoose.md)
+- [Create a new Metamodel](General/CreateNewMetamodel.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Analyse Java Project](General/AnalyseJavaProject.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Moose Query](https://moosequery.ferlicot.fr/) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ## Moose Projects
 
-- [FAST](projects/FAST.md)  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [FAST](projects/FAST.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+
+### Famix Parser
+
+- [VerveineJ](projects/VerveineJ.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 ## Other Documentation
 
