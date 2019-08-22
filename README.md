@@ -4,11 +4,11 @@ A wiki gathering documentation related to Moose project.
 
 ## Contents  <!-- omit in toc -->
 
-- [Beginners](#Beginners)
-- [General](#General)
-- [Moose Projects](#Moose-Projects)
-  - [Famix Parser](#Famix-Parser)
-- [Other Documentation](#Other-Documentation)
+- [Beginners](#beginners)
+- [General](#general)
+- [Moose Projects](#moose-projects)
+  - [Famix Parser](#famix-parser)
+- [Other Documentation](#other-documentation)
 
 ## Beginners
 
@@ -28,6 +28,7 @@ A wiki gathering documentation related to Moose project.
 ### Famix Parser
 
 - [VerveineJ](projects/VerveineJ.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [PowerBuilderParser](projects/PowerBuilderParser.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 ## Other Documentation
 
