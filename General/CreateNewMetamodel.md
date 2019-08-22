@@ -44,8 +44,29 @@ To design a meta-model, we need to specify its entities, theirs relations and th
 
 ### Define entities
 
-- Define Entities
-  - with comments
+A meta-model is composed of entities.
+Those entities represent the elements of the model we will manipulate.
+To define a new entity in the generator, we extend the method `#defineClasses`.
+Then, we use the generator builder (provided by `FamixMetamodelGenerator`) with the method `#newClassNamed:`.
+
+```st
+DemoMetamodelGenerator>>#defineClasses
+    super defineClasses.
+    entity := builder newClassNamed: #Entity.
+    package := builder newClassNamed: #Package.
+    class := builder newClassNamed: #Class.
+    method := builder newClassNamed: #Method.
+    variable := builder newClassNamed: #Variable.
+    localVariable := builder newClassNamed: #LocalVariable.
+    attribute := builder newClassNamed: #Attribute.
+```
+
+It is important to comment the entities to help the other developers understand our meta-model.
+So, we use the method `#newClassNamed:comment:`
+
+```st
+class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
+```
 
 ### Define Relations
 
