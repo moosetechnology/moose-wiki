@@ -80,6 +80,8 @@ So, we use the method `#newClassNamed:comment:`
 class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
 ```
 
+It is also possible to use entities that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
+
 ### Define hierarchy
 
 Once the entities are defined, the next step is to specify their hierarchy.
@@ -129,7 +131,6 @@ DemoMetamodelGenerator>>#defineRelations
     super defineRelations.
 
     package <>-* class.
-    package <>-* method.
 
     class <>-* attribute.
 
@@ -186,8 +187,60 @@ If, in the futur, the generator is modified, the generation regenerates only the
 
 ## Introducing traits
 
-- Define Traits
-- Good Practice
+In addition of the entity, we can use trait to add information in the meta-model.
+The traits are defined in the same way as the entities.
+In our previous example, the classes are inside a package.
+However, we forgot that a package can also contain another package.
+
+First of all we need to define the traits to create the containment relation of a package.
+We declare the trait in the method `#defineTraits`.
+
+```st
+defineTraits
+
+    super defineTraits.
+
+    tPackageable := builder newTraitNamed: #TPackageable comment: 'I can be inside a Package'.
+    tWithPackages := builder newTraitNamed: #TWithPackages comment: 'I can contains packageable elements'.
+```
+
+Then, we have to change the hierarchy of our entity to add the traits.
+
+```st
+DemoMetamodelGenerator>>#defineHierarchy
+
+    super defineHierarchy.
+
+    package --|> entity.
+    package --|> tWithPackages.
+    package --|> tPackageable.
+
+    class --|> entity.
+    class --|> tPackageable.
+
+    method --|> entity.
+
+    variable <|-- localVariable.
+    variable <|-- attribute.
+```
+
+Finally, we define the relations between the traits.
+
+```st
+DemoMetamodelGenerator>>#defineRelations
+
+    super defineRelations.
+
+    "package <>-* class.
+    package <>-* package."
+    tWithPackages <>-* tPackageable.
+
+    class <>-* attribute.
+
+    method <>-* localVariable
+```
+
+It is also possible to use traits that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
 ## Introducing submetamodels
 
