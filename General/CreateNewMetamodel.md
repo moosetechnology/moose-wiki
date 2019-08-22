@@ -33,7 +33,7 @@ Then we need to configure the generator.
 We have to specify the package in which the meta-model will be generated.
 
 ```st
-DemoMetamodelGenerator class >> packageName
+DemoMetamodelGenerator class >> #packageName
 
     ^ #'Demo-Model-generated'
 ```
@@ -42,7 +42,7 @@ The package name will be used as prefix for the generated classes.
 We can customize it with the method `#prefix`.
 
 ```st
-DemoMetamodelGenerator class >> packageName
+DemoMetamodelGenerator class >> #packageName
 
     ^ #'Demo'
 ```
@@ -163,9 +163,19 @@ Others can be applied on the relation:
 
 ### Define properties
 
-- Define Properties
-  - with comments
-  - supported properties (String, Number)
+The last step before generating the model is the definition of the properties of the entities.
+A property can be of any type.
+It is also possible to define a comment for each property.
+Let's create the method `#defineProperties` in our generator
+
+```st
+DemoMetamodelGenerator>>#defineProperties
+
+    super defineProperties.
+
+   (entity property: #name type: #String)
+       comment: 'The name of the entity'.
+```
 
 ### Generate
 
