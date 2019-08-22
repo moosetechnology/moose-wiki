@@ -4,6 +4,7 @@
 
 In the following, we present how to create your own meta-model or to extend an already existing meta-model.
 
+- [Set up](#set-up)
 - [Basic meta-model](#basic-meta-model)
   - [Define entities](#define-entities)
   - [Define hierarchy](#define-hierarchy)
@@ -14,7 +15,7 @@ In the following, we present how to create your own meta-model or to extend an a
 - [Introducing submetamodels](#introducing-submetamodels)
 - [Thanks](#thanks)
 
-## Set up <!-- omit in toc -->
+## Set up
 
 First of all, we need to [download Moose](../Beginners/InstallMoose.md) version 7 or higher.
 
