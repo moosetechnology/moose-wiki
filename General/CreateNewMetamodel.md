@@ -51,6 +51,7 @@ Then, we use the generator builder (provided by `FamixMetamodelGenerator`) with 
 
 ```st
 DemoMetamodelGenerator>>#defineClasses
+
     super defineClasses.
     entity := builder newClassNamed: #Entity.
     package := builder newClassNamed: #Package.
@@ -68,18 +69,99 @@ So, we use the method `#newClassNamed:comment:`
 class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
 ```
 
+### Define hierarchy
+
+Once the entities are defined, the next step is to specify their hierarchy.
+One method and two binary methods can be used in this step.
+
+|       method       | binary |             definition             |
+| :----------------: | :----: | :--------------------------------: |
+| `#generalization:` | `--|>` | The receiver extends the parameter |
+|                    | `<|--` | The parameter extends the receiver |
+
+The hierarchy is defined in the generator with the method `#defineHierarchy`.
+
+```st
+DemoMetamodelGenerator>>#defineHierarchy
+
+    super defineHierarchy.
+    package --|> entity.
+    class --|> entity.
+    method --|> entity.
+
+    variable <|-- localVariable.
+    variable <|-- attribute.
+```
+
 ### Define relations
 
-- Explication relations
-  - with comments
-  - with container
-- Define Relations
+Then we will define the relations between the entities.
+Multiple relations are available in the famix.
+In the following we present the relations and the keywords to define them.
+
+|      method       | binary | definition |
+| :---------------: | :----: | :--------: |
+|   `#oneToOne:`    |  `-`   |            |
+|   `#oneToMany:`   |  `-*`  |            |
+|   `#manyToOne:`   |  `*-`  |            |
+|  `#manyToMany:`   | `*-*`  |            |
+|  `#containsOne:`  | `<>-`  |            |
+| `#containsMany:`  | `<>-*` |            |
+| `#oneBelongsTo:`  | `-<>`  |            |
+| `#manyBelongsTo:` | `*-<>` |            |
+
+We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
+
+```st
+DemoMetamodelGenerator>>#defineRelations
+
+    super defineRelations.
+
+    package <>-* class.
+    package <>-* method.
+
+    class <>-* attribute.
+
+    method <>-* localVariable
+```
+
+As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
+
+```st
+DemoMetamodelGenerator>>#defineRelations
+
+    super defineRelations.
+
+    ((package property: #classes) comment: 'The classes inside the package')
+        <>-*
+    ((class property: #package) comment: 'The package that contains this class').
+```
+
+Finally, it is possible to set several other properties.
+Some be applied on one side of the relation:
+
+- container _(the side "contains" the other one, see the different keyword)_
+- derived _(the relation is not part of the model but is computed)_
+- source _(source of an association)_
+- target _(source of an association)_
+
+Others can be applied on the relation:
+
+- withoutPrimaryContainer _(Since an element can only have one container, it allows one to create another containment relation. This relation will not set the method `#belongsTo`)_
+- withNavigation _(force the relation to appear in the Moose Playground)_
 
 ### Define properties
 
 - Define Properties
   - with comments
   - supported properties (String, Number)
+
+### Generate
+
+We have create our meta-model generator.
+The last step is to execute the generation with: `DemoMetamodelGenerator generate`.
+
+If, in the futur, the generator is modified, the generation regenerates only the modified elements and remove the old one. It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
 
 ## Introducing traits
 
