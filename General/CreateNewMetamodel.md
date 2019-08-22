@@ -36,7 +36,7 @@ DemoMetamodelGenerator class >> packageName
     ^ #'Demo'
 ```
 
-## Basic Meta-model
+## Basic meta-model
 
 In this section, we will see how to create a simple meta-model.
 
@@ -68,7 +68,7 @@ So, we use the method `#newClassNamed:comment:`
 class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
 ```
 
-### Define Relations
+### Define relations
 
 - Explication relations
   - with comments
@@ -81,12 +81,12 @@ class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
   - with comments
   - supported properties (String, Number)
 
-## Introducing Traits
+## Introducing traits
 
 - Define Traits
 - Good Practice
 
-## Introducing Submetamodels
+## Introducing submetamodels
 
 - Different kind of submetamodels
   - by extension
