@@ -20,6 +20,7 @@ A wiki gathering documentation related to Moose project.
 - [Create a new Metamodel](General/CreateNewMetamodel.md)
 - [Analyse Java Project](General/AnalyseJavaProject.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 - [Moose Query](https://moosequery.ferlicot.fr/) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [Tree Query](https://github.com/juliendelplanque/TreeQuery) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ## Moose Projects
 
