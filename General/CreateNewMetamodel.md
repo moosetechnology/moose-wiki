@@ -13,6 +13,9 @@ In the following, we present how to create your own meta-model or to extend an a
   - [Generate](#generate)
 - [Introducing traits](#introducing-traits)
 - [Introducing submetamodels](#introducing-submetamodels)
+  - [Set up submetamodels](#set-up-submetamodels)
+  - [Define remote entities and traits](#define-remote-entities-and-traits)
+  - [Define remote hierarchy](#define-remote-hierarchy)
 - [Thanks](#thanks)
 
 ## Set up
@@ -112,16 +115,16 @@ Then we will define the relations between the entities.
 Multiple relations are available in the famix.
 In the following we present the relations and the keywords to define them.
 
-|      method       | binary | definition |
-| :---------------: | :----: | :--------: |
-|   `#oneToOne:`    |  `-`   |            |
-|   `#oneToMany:`   |  `-*`  |            |
-|   `#manyToOne:`   |  `*-`  |            |
-|  `#manyToMany:`   | `*-*`  |            |
-|  `#containsOne:`  | `<>-`  |            |
-| `#containsMany:`  | `<>-*` |            |
-| `#oneBelongsTo:`  | `-<>`  |            |
-| `#manyBelongsTo:` | `*-<>` |            |
+|      method       | binary |
+| :---------------: | :----: |
+|   `#oneToOne:`    |  `-`   |
+|   `#oneToMany:`   |  `-*`  |
+|   `#manyToOne:`   |  `*-`  |
+|  `#manyToMany:`   | `*-*`  |
+|  `#containsOne:`  | `<>-`  |
+| `#containsMany:`  | `<>-*` |
+| `#oneBelongsTo:`  | `-<>`  |
+| `#manyBelongsTo:` | `*-<>` |
 
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
@@ -244,13 +247,32 @@ It is also possible to use traits that are already defined in another meta-model
 
 ## Introducing submetamodels
 
-- Different kind of submetamodels
-  - by extension
-  - by defining submetamodels
+One powerful feature of Famix is the possibility to use submetamodels.
+It allows one to extend or compose several meta-models.
 
-- Define submetamodels
-  - Example
-- Submetamodels and traits
+There are two way of extending of meta-model:
+
+1. Create a generator that extends the first one
+2. Create a separate generator that declare another as submetamodel.
+
+Despite the first one can be used, when the meta-model is generated, the entities that comes from the extended generator will be created two times, in the new generator and in the old one.
+So, the best way to extends a meta-model is to use the submetamodels.
+In the following, we present how to configure a generator for submetamodels.
+
+### Set up submetamodels
+
+- submetamodels
+- modifyRemote
+
+### Define remote entities and traits
+
+- remote Entity
+- remote Trait
+
+### Define remote hierarchy
+
+- example simple
+- example with Trait, and conflicting trait
 
 ## Thanks
 
