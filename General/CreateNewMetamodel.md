@@ -16,6 +16,8 @@ In the following, we present how to create your own meta-model or to extend an a
   - [Set up submetamodels](#set-up-submetamodels)
   - [Define remote entities and traits](#define-remote-entities-and-traits)
   - [Define remote hierarchy](#define-remote-hierarchy)
+  - [Define remote relations](#define-remote-relations)
+  - [Complementary information](#complementary-information)
 - [Thanks](#thanks)
 
 ## Set up
@@ -239,6 +241,8 @@ DemoMetamodelGenerator>>#defineRelations
     tWithPackages <>-* tPackageable.
 
     class <>-* attribute.
+    class <>-* method.
+
 
     method <>-* localVariable
 ```
@@ -261,22 +265,25 @@ In the following, we present how to configure a generator for submetamodels.
 
 ### Set up submetamodels
 
-In this example, we will create a new generator that will add AST information to the previous entity `method` to represent its body.
+In this example, we will create a new generator that will add the interface entity that will be use to represent an interface.
+The interface is packageable and contain methods.
+
+> Note that it is done in an example. The best way in this case would be to modify the previous generator
 
 First of all, we create a new generator.
 
 ```st
-FamixMetamodelGenerator subclass: #DemoASTMetamodelGenerator
+FamixMetamodelGenerator subclass: #DemoInterfaceMetamodelGenerator
     slots: { }
     classVariables: { }
-    package: 'Demo-ASTModel-Generator'
+    package: 'Demo-InterfaceModel-Generator'
 ```
 
 Then we declare our previous generator as submetamodel
 
 ```st
-DemoASTMetamodelGenerator class >> #submetamodels
-    
+DemoInterfaceMetamodelGenerator class >> #submetamodels
+
     ^ { DemoMetamodelGenerator }
 ```
 
@@ -284,22 +291,67 @@ In our example, we will not only extend the first meta-model, we will create rel
 In this case, we have to implement the method `modifyMetamodel: aMetamodel` to correctly create [the extension methods](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Extensions.md).
 
 ```st
-DemoASTMetamodelGenerator class >> #modifyMetamodel: aMetamodel
+DemoInterfaceMetamodelGenerator class >> #modifyMetamodel: aMetamodel
 
     super modifyMetamodel: aMetamodel.
 
     self fixRemoteMetamodelRelationsIn: aMetamodel.
 ```
 
+> We also have to define the `#prefix` and the `#packageName`
+
 ### Define remote entities and traits
 
-- remote Entity
-- remote Trait
+Once the generator is configured we can define the entities of the AST meta-model and
+    the entities that come from the Demo meta-model.
+To define an entity of another meta-model we used the method `#remoteEntity:withPrefix:`.
+The prefix is then the prefix defined for the submetamodel.
+
+```st
+DemoInterfaceMetamodelGenerator>>#defineEntities
+
+    super defineEntities.
+    interface := builder newClassNamed: #Interface.
+
+    method := self remoteEntity: #Method withPrefix: #Demo.
+```
+
+> In some case, it may be necessary to define remote trait. Use the method `remoteTrait:withPrefix:` on the generator
 
 ### Define remote hierarchy
 
-- example simple
-- example with Trait, and conflicting trait
+To represent the relation of containment of a package on an interface we use the trait `#TPackageable` (see [Introducing traits](#introducing-traits)).
+Because there is only one trait with this name in the submetamodels, we can use the notation with the symbol instead of defining it in a variable in the "defineEntities" section.
+
+```st
+DemoInterfaceMetamodelGenerator>>#defineHierarchy
+
+    super defineHierarchy.
+    "use the trait of the other metamodel"
+    interface --|> #TPackageable.
+```
+
+### Define remote relations
+
+Finally, we create the relations between the interface and the methods.
+
+```st
+DemoInterfaceMetamodelGenerator>>#defineRelations
+
+    super defineRelations.
+
+    ((interface property: #methods) comment: 'The methods of the interface')
+        <>-*
+    ((method property: #interface) comment: 'The interface that own me').
+```
+
+### Complementary information
+
+In our example, an interface contain methods and a class contain methods too.
+However, it is not possible to have to main container for an entity (see [Define relations](#define-relations)).
+In this case, we can either declare the relation "interface <>-* method" without primary container or define
+two Traits in the first meta-model.
+One would be `#TMethod` and the other `#TWithMethods`.
 
 ## Thanks
 

@@ -17,7 +17,7 @@ A wiki gathering documentation related to Moose project.
 ## General
 
 - [Define baseline loading moose](General/DefineBaselineLoadingMoose.md)
-- [Create a new Metamodel](General/CreateNewMetamodel.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Create a new Metamodel](General/CreateNewMetamodel.md)
 - [Analyse Java Project](General/AnalyseJavaProject.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 - [Moose Query](https://moosequery.ferlicot.fr/) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
