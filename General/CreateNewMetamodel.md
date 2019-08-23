@@ -316,7 +316,7 @@ DemoInterfaceMetamodelGenerator>>#defineEntities
     method := self remoteEntity: #Method withPrefix: #Demo.
 ```
 
-> In some case, it may be necessary to define remote trait. Use the method `remoteTrait:withPrefix:` on the generator
+> In some case, it may be necessary to define remote trait. Use the method `#remoteTrait:withPrefix:` on the generator
 
 ### Define remote hierarchy
 
