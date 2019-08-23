@@ -261,8 +261,35 @@ In the following, we present how to configure a generator for submetamodels.
 
 ### Set up submetamodels
 
-- submetamodels
-- modifyRemote
+In this example, we will create a new generator that will add AST information to the previous entity `method` to represent its body.
+
+First of all, we create a new generator.
+
+```st
+FamixMetamodelGenerator subclass: #DemoASTMetamodelGenerator
+    slots: { }
+    classVariables: { }
+    package: 'Demo-ASTModel-Generator'
+```
+
+Then we declare our previous generator as submetamodel
+
+```st
+DemoASTMetamodelGenerator class >> #submetamodels
+    
+    ^ { DemoMetamodelGenerator }
+```
+
+In our example, we will not only extend the first meta-model, we will create relations between the first one and the new one.
+In this case, we have to implement the method `modifyMetamodel: aMetamodel` to correctly create [the extension methods](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Extensions.md).
+
+```st
+DemoASTMetamodelGenerator class >> #modifyMetamodel: aMetamodel
+
+    super modifyMetamodel: aMetamodel.
+
+    self fixRemoteMetamodelRelationsIn: aMetamodel.
+```
 
 ### Define remote entities and traits
 
