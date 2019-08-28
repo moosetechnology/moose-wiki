@@ -43,7 +43,7 @@ The file defines 8 entities: 1 Namespace, 2 Packages, 2 Classes, 1 Method, 1 Att
 
 The overall object graph can be seen graphically below.
 
-![./img-ImportingAndExportingModels/mse-graph.png](MSE example)
+![MSE example](./img-ImportingAndExportingModels/mse-graph.png)
 
 A more complex MSE example is available for download as described in .
 
