@@ -28,8 +28,8 @@ A wiki gathering documentation related to Moose project.
 
 ### Famix Parser
 
-- [VerveineJ](projects/VerveineJ.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
-- [PowerBuilderParser](projects/PowerBuilderParser.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [VerveineJ](projects/parsers/VerveineJ.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [PowerBuilderParser](projects/parsers/PowerBuilderParser.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 ## Other Documentation
 
