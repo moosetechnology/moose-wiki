@@ -27,7 +27,7 @@ A wiki gathering documentation related to Moose project.
 ## Moose IDE
 
 - [Meta Browser](Moose-IDE/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
-- [Famix Maker](Moose-IDE/famixMaker.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Famix Maker](https://github.com/moosetechnology/Moose-Easy) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ## Moose Projects
 
