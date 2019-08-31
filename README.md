@@ -6,6 +6,7 @@ A wiki gathering documentation related to Moose project.
 
 - [Beginners](#beginners)
 - [General](#general)
+- [Moose IDE](#moose-ide)
 - [Moose Projects](#moose-projects)
   - [Famix Parser](#famix-parser)
 - [Other Documentation](#other-documentation)
@@ -22,6 +23,11 @@ A wiki gathering documentation related to Moose project.
 - [Analyse Java Project](https://fuhrmanator.github.io/2019/07/29/AnalyzingJavaWithMoose.html) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [Moose Query](https://moosequery.ferlicot.fr/) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [Tree Query](https://github.com/juliendelplanque/TreeQuery) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+
+## Moose IDE
+
+- [Meta Browser](Moose-IDE/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [Famix Maker](Moose-IDE/famixMaker.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 ## Moose Projects
 
