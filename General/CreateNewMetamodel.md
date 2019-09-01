@@ -1,7 +1,5 @@
 # Create a new Meta-model (Since Moose 7) <!-- omit in toc -->
 
-:no_entry: Work In Progress
-
 In the following, we present how to create your own meta-model or to extend an already existing meta-model.
 
 - [Set up](#set-up)
