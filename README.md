@@ -31,12 +31,13 @@ A wiki gathering documentation related to Moose project.
 
 ## Moose Projects
 
-- [FAST](projects/FAST.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [FAST](projects/FAST.md) - Represent the AST in Famix ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Petit Parser](https://github.com/moosetechnology/PetitParser) - Write easily a Parser with Moose ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ### Famix Parser
 
-- [VerveineJ](projects/parsers/VerveineJ.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
-- [PowerBuilderParser](projects/parsers/PowerBuilderParser.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [VerveineJ](projects/parsers/VerveineJ.md) - Generate an mse from a Java project ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [PowerBuilderParser](projects/parsers/PowerBuilderParser.md) - Generate an mse from a Powerbuilder project ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 ## Other Documentation
 
