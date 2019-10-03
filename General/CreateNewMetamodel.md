@@ -285,17 +285,6 @@ DemoInterfaceMetamodelGenerator class >> #submetamodels
     ^ { DemoMetamodelGenerator }
 ```
 
-In our example, we will not only extend the first meta-model, we will create relations between the first one and the new one.
-In this case, we have to implement the method `modifyMetamodel: aMetamodel` to correctly create [the extension methods](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Extensions.md).
-
-```st
-DemoInterfaceMetamodelGenerator class >> #modifyMetamodel: aMetamodel
-
-    super modifyMetamodel: aMetamodel.
-
-    self fixRemoteMetamodelRelationsIn: aMetamodel.
-```
-
 > We also have to define the `#prefix` and the `#packageName`
 
 ### Define remote entities and traits
