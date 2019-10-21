@@ -94,12 +94,14 @@ It is also possible to use entities that are already defined in another meta-mod
 ### Define hierarchy
 
 Once the entities are defined, the next step is to specify their hierarchy.
-One method and two binary methods can be used in this step.
 
-|       method       | binary |             definition             |
-| :----------------: | :----: | :--------------------------------: |
-| `#generalization:` | <code>--&#124;></code> | The receiver extends the parameter |
-|                    |  <code><&#124;--</code> | The parameter extends the receiver |
+| binary |             definition             |
+| :----: | :--------------------------------: |
+| <code>--&#124;></code> | Left entity extends (inherits from) the right one |
+| <code><&#124;--</code> | Right entity extends (inherits from) the left one |
+
+Note that these symbols are actually pharo binary methods.
+One can also use a Pharo keyword method: `#generalization:` defining that the receiver extends the parameter (i.e. similar to <code>--&#124;></code>).
 
 The hierarchy is defined in the generator with the method `#defineHierarchy`.
 
