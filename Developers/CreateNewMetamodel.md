@@ -49,11 +49,11 @@ DemoMetamodelGenerator class >> #packageName
     ^ #'Demo-Model-generated'
 ```
 
-The package name will be used as prefix for the generated classes.
-We can customize it with the method `#prefix`.
+By default the package name will be used as prefix for the generated classes.
+But we can specify a custom prefix by defining the method `#prefix`.
 
 ```st
-DemoMetamodelGenerator class >> #packageName
+DemoMetamodelGenerator class >> #prefix
 
     ^ #'Demo'
 ```
