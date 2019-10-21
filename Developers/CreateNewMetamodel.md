@@ -136,7 +136,7 @@ In the following we present the relations and the keywords to define them.
 
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
-```st
+<code>st
 DemoMetamodelGenerator>>#defineRelations
 
     super defineRelations.
@@ -146,7 +146,7 @@ DemoMetamodelGenerator>>#defineRelations
     class <>-* attribute.
 
     method <>-* localVariable
-```
+</code>
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
