@@ -319,7 +319,7 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 
 Finally, we create the relations between the interface and the methods.
 
-```st
+<code>
 DemoInterfaceMetamodelGenerator>>#defineRelations
 
     super defineRelations.
@@ -327,7 +327,7 @@ DemoInterfaceMetamodelGenerator>>#defineRelations
     ((interface property: #methods) comment: 'The methods of the interface')
         <>-*
     ((method property: #interface) comment: 'The interface that own me').
-```
+</code>
 
 ### Complementary information
 
