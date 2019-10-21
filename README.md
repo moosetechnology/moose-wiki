@@ -24,7 +24,7 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 
 More advanced tools
 
-- [Meta Browser](Moose-IDE/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [Meta Browser](Users/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 
 
 ## Developers
