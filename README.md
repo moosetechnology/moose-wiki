@@ -46,9 +46,11 @@ Visualizations are build with the [Roassal tool](https://github.com/ObjectProfil
 
 ## Developers
 
+A typical develpment action is to add a new programming language to the ones understood by Moose.
+This implies writing a (so called) parser for the language and rceating a meta-model.
+
 - [Create a new Metamodel](Developers/CreateNewMetamodel.md)
 - [Define baseline loading moose](Developers/DefineBaselineLoadingMoose.md)
-- [Famix NG](https://www.slideshare.net/JulienDelp/famix-nextgeneration) - presentation of Famix generator
 
 ### Parsers
 

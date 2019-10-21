@@ -56,6 +56,8 @@ In this section, we will see how to create a simple meta-model.
 
 To design a meta-model, we need to specify its entities, theirs relations and theirs properties.
 
+You may also consult a [presentation of Famix generator](https://www.slideshare.net/JulienDelp/famix-nextgeneration) from Julien Delplanque.
+
 ### Define entities
 
 A meta-model is composed of entities.
