@@ -69,9 +69,9 @@ You may also consult a [presentation of Famix generator](https://www.slideshare.
 ### Define entities
 
 A meta-model is composed of entities.
-Those entities represent the elements of the model we will manipulate.
-To define a new entity in the generator, we extend the method `#defineClasses`.
-Then, we use the generator builder (provided by `FamixMetamodelGenerator`) with the method `#newClassNamed:`.
+These entities represent the elements of the model we will manipulate.
+To define entities in the generator, we extend the method `#defineClasses`.
+Each entity is defined using the generator builder (provided by `FamixMetamodelGenerator`) to which we send the the message `#newClassNamed:`.
 
 ```st
 DemoMetamodelGenerator>>#defineClasses
@@ -86,14 +86,14 @@ DemoMetamodelGenerator>>#defineClasses
     attribute := builder newClassNamed: #Attribute.
 ```
 
-It is important to comment the entities to help the other developers understand our meta-model.
-So, we use the method `#newClassNamed:comment:`
+It is important to comment the entities to help other developers understand our meta-model.
+This can be done with the `#newClassNamed:comment:` method.
 
 ```st
 class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
 ```
 
-It is also possible to use entities that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
+It is also possible to use entities that are already defined in a [library of predefined entities](predefinedEntities.md) or in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
 ### Define hierarchy
 
@@ -189,10 +189,11 @@ DemoMetamodelGenerator>>#defineProperties
 
 ### Generate
 
-We have create our meta-model generator.
-The last step is to execute the generation with: `DemoMetamodelGenerator generate`.
+We described our meta-model.
+The last step is to actually generate it with: `DemoMetamodelGenerator generate`.
 
-If, in the futur, the generator is modified, the generation regenerates only the modified elements and remove the old one. It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
+If, later, the description of the meta-model is modified, the generation will regenerate only the modified elements and remove the old one.
+It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
 
 ## Introducing traits
 
