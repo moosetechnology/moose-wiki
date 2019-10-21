@@ -17,13 +17,13 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 ## Users
 
 After installing and running Moose, one typically:
-1. Loads a model of a software system to perform some analyses on it;
-1. Performs some queries on the model
-1. Builds some visualization of the model
+1. loads a model of a software system to perform some analyses on it;
+1. performs some queries on the model
+1. builds some visualization of the model
 
 ### Loading a model
 
-The most popular meta-model is the Java meta-model:
+A popular meta-model is the Java meta-model:
 - [Famix Maker](https://github.com/moosetechnology/Moose-Easy) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [Analyse Java Project](https://fuhrmanator.github.io/2019/07/29/AnalyzingJavaWithMoose.html) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
