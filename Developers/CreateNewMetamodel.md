@@ -136,29 +136,23 @@ In the following we present the relations and the keywords to define them.
 
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
-<code>st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
-    package &lt;&gt;-* class.
-
+    package <>-* class.
     class <>-* attribute.
-
     method <>-* localVariable
 </code>
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
-```st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
     ((package property: #classes) comment: 'The classes inside the package')
         <>-*
     ((class property: #package) comment: 'The package that contains this class').
-```
+</code>
 
 Finally, it is possible to set several other properties.
 Some be applied on one side of the relation:
@@ -237,21 +231,16 @@ DemoMetamodelGenerator>>#defineHierarchy
 
 Finally, we define the relations between the traits.
 
-```st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
-    "package <>-* class.
-    package <>-* package."
+    package <>-* class.
+    package <>-* package.
     tWithPackages <>-* tPackageable.
-
     class <>-* attribute.
     class <>-* method.
-
-
     method <>-* localVariable
-```
+</code>
 
 It is also possible to use traits that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
