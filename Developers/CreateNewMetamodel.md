@@ -23,7 +23,7 @@ These are described in [another page](predefinedEntities.md) ![Unfinished](https
   - [Define remote hierarchy](#define-remote-hierarchy)
   - [Define remote relations](#define-remote-relations)
   - [Complementary information](#complementary-information)
-- [Library of predefined entities/traits](predefinedEntities.md)
+- [Library of predefined entities/traits](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
 - [Thanks](#thanks)
 
 ## Set up
