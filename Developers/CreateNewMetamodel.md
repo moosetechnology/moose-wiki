@@ -6,7 +6,7 @@ The meta-model describes the entities that compose a program in the given langua
 
 In the following, we describe how to create a new meta-model or extend an existing one.
 Moose being more specifically dedicated to source code analysis, there is a number of pre-set entities/traits that should help one define new meta-models for a given programming language.
-These are described in [another page](predefinedEntities.md).
+These are described in [another page](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
 
 
 - [Set up](#set-up)

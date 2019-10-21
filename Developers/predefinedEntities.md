@@ -40,6 +40,7 @@ We list here all traits available.
   - Module
   - Method
   - Attribute
+  - Annotations
   - Function
   - Enumerate
   - Compilation unit
