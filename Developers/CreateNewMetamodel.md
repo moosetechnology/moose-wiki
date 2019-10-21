@@ -141,7 +141,7 @@ DemoMetamodelGenerator>>#defineRelations
 
     super defineRelations.
 
-    package <>-* class.
+    package &lt;&gt;-* class.
 
     class <>-* attribute.
 
