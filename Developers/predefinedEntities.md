@@ -54,3 +54,39 @@ We list here all traits available.
   - Named entities
   - Class
   - Method
+
+## Predefined Associations
+
+Associations should be thought of as n-m relationhips between entities.
+For that reason, they are reified into their own traits and using an association involves:
+- defining a class representing the association (for example Inheritance)
+- defining two classes at each end of the association (for example subclass, superclass)
+
+Associations should define two roles (`from` and `to`) to identify both ends of the association.
+
+The predefined associations are:
+  - Association
+  - Access
+  - Include
+  - Inheritance
+  - Invocation
+  - Reference
+
+## Predefined Properties
+
+Properties are primitive types attributes in the entities (Number, String, Boolean):
+- Metrics
+- Named
+  (Note: may be should be removed and linked to Namespace)
+- Navigation
+- Stub
+- With class scope
+- With modifiers
+- With signature
+
+
+## Predefined Relationships
+
+
+## Predefined Entities
+
