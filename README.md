@@ -47,15 +47,16 @@ Visualizations are build with the [Roassal tool](https://github.com/ObjectProfil
 ## Developers
 
 A typical develpment action is to add a new programming language to the ones understood by Moose.
-This implies writing a (so called) parser for the language and rceating a meta-model.
+This implies writing a parser for the language and [creating a new meta-model](Developers/CreateNewMetamodel.md)
 
-- [Create a new Metamodel](Developers/CreateNewMetamodel.md)
 - [Define baseline loading moose](Developers/DefineBaselineLoadingMoose.md)
 
 ### Parsers
 
 Parsing source code to analyse is an important part of Moose.
-There are different parsers already created at various stages of progress that you can use and/or contribute to.
+There are different (so called) parsers already created at various stages of progress that you can use and/or contribute to.
+
+Note: they do more than parsing since they also resolve names in the parsed code and this is not a small task.
 
 - [Petit Parser](https://github.com/moosetechnology/PetitParser) - Write easily a Parser with Moose ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [VerveineJ](Developers/Parsers/VerveineJ.md) - Generate an mse from a Java project ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
