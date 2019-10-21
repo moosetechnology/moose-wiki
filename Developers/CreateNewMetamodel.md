@@ -1,10 +1,13 @@
-# Create a new Meta-model (Since Moose 7) <!-- omit in toc -->
+# Create a new Meta-model (FamixNG: since Moose 7) <!-- omit in toc -->
 
 To analyse a system in a given programming language, Moose must have a meta-model for that language.
 For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
-The meta-model desribes the entities that compose a program in the given language and how they are related.
+The meta-model describes the entities that compose a program in the given language and how they are related.
 
 In the following, we describe how to create a new meta-model or extend an existing one.
+Moose being more specifically dedicated to source code analysis, there is a number of pre-set entities/traits that should help one define new meta-models for a given programming language.
+These are described in [another page](predefinedEntities.md).
+
 
 - [Set up](#set-up)
 - [Basic meta-model](#basic-meta-model)
@@ -20,6 +23,7 @@ In the following, we describe how to create a new meta-model or extend an existi
   - [Define remote hierarchy](#define-remote-hierarchy)
   - [Define remote relations](#define-remote-relations)
   - [Complementary information](#complementary-information)
+- [Library of predefined entities/traits](predefinedEntities.md)
 - [Thanks](#thanks)
 
 ## Set up
