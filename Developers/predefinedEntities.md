@@ -9,6 +9,7 @@ In this page, we present the library of predefined entities that is part of Fami
 
 In FamixNG, recurrent properties are modelled into traits.
 New entities are created as classes composed from these existing traits.
+Some common entities (like classes) pre-composed with common traits are also defined.
 We list here all traits available.
 
 - Associations
@@ -48,3 +49,8 @@ We list here all traits available.
   - Variables (global, local)
   - Header file
   - File system
+- Common entities
+  - Sourced entities
+  - Named entities
+  - Class
+  - Method
