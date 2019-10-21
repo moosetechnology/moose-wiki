@@ -1,6 +1,10 @@
 # Create a new Meta-model (Since Moose 7) <!-- omit in toc -->
 
-In the following, we present how to create your own meta-model or to extend an already existing meta-model.
+To analyse a system in a given programming language, Moose must have a meta-model for that language.
+For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
+The meta-model desribes the entities that compose a program in the given language and how they are related.
+
+In the following, we describe how to create a new meta-model or extend an existing one.
 
 - [Set up](#set-up)
 - [Basic meta-model](#basic-meta-model)
@@ -94,8 +98,8 @@ One method and two binary methods can be used in this step.
 
 |       method       | binary |             definition             |
 | :----------------: | :----: | :--------------------------------: |
-| `#generalization:` | `--|>` | The receiver extends the parameter |
-|                    | `<|--` | The parameter extends the receiver |
+| `#generalization:` | <code>--&#124;></code> | The receiver extends the parameter |
+|                    |  <code><&#124;--</code> | The parameter extends the receiver |
 
 The hierarchy is defined in the generator with the method `#defineHierarchy`.
 
