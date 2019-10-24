@@ -1,6 +1,13 @@
-# Create a new Meta-model (Since Moose 7) <!-- omit in toc -->
+# Create a new Meta-model (FamixNG: since Moose 7) <!-- omit in toc -->
 
-In the following, we present how to create your own meta-model or to extend an already existing meta-model.
+To analyse a system in a given programming language, Moose must have a meta-model for that language.
+For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
+The meta-model describes the entities that compose a program in the given language and how they are related.
+
+In the following, we describe how to create a new meta-model or extend an existing one.
+Moose being more specifically dedicated to source code analysis, there is a number of pre-set entities/traits that should help one define new meta-models for a given programming language.
+These are described in [another page](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
+
 
 - [Set up](#set-up)
 - [Basic meta-model](#basic-meta-model)
@@ -16,6 +23,7 @@ In the following, we present how to create your own meta-model or to extend an a
   - [Define remote hierarchy](#define-remote-hierarchy)
   - [Define remote relations](#define-remote-relations)
   - [Complementary information](#complementary-information)
+- [Library of predefined entities/traits](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
 - [Thanks](#thanks)
 
 ## Set up
@@ -41,11 +49,11 @@ DemoMetamodelGenerator class >> #packageName
     ^ #'Demo-Model-generated'
 ```
 
-The package name will be used as prefix for the generated classes.
-We can customize it with the method `#prefix`.
+By default the package name will be used as prefix for the generated classes.
+But we can specify a custom prefix by defining the method `#prefix`.
 
 ```st
-DemoMetamodelGenerator class >> #packageName
+DemoMetamodelGenerator class >> #prefix
 
     ^ #'Demo'
 ```
@@ -56,12 +64,14 @@ In this section, we will see how to create a simple meta-model.
 
 To design a meta-model, we need to specify its entities, theirs relations and theirs properties.
 
+You may also consult a [presentation of Famix generator](https://www.slideshare.net/JulienDelp/famix-nextgeneration) from Julien Delplanque.
+
 ### Define entities
 
 A meta-model is composed of entities.
-Those entities represent the elements of the model we will manipulate.
-To define a new entity in the generator, we extend the method `#defineClasses`.
-Then, we use the generator builder (provided by `FamixMetamodelGenerator`) with the method `#newClassNamed:`.
+These entities represent the elements of the model we will manipulate.
+To define entities in the generator, we extend the method `#defineClasses`.
+Each entity is defined using the generator builder (provided by `FamixMetamodelGenerator`) to which we send the the message `#newClassNamed:`.
 
 ```st
 DemoMetamodelGenerator>>#defineClasses
@@ -76,24 +86,26 @@ DemoMetamodelGenerator>>#defineClasses
     attribute := builder newClassNamed: #Attribute.
 ```
 
-It is important to comment the entities to help the other developers understand our meta-model.
-So, we use the method `#newClassNamed:comment:`
+It is important to comment the entities to help other developers understand our meta-model.
+This can be done with the `#newClassNamed:comment:` method.
 
 ```st
 class := builder newClassNamed: #Class comment: 'I represent a Smalltalk class'.
 ```
 
-It is also possible to use entities that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
+It is also possible to use entities that are already defined in a [library of predefined entities](predefinedEntities.md) or in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
 ### Define hierarchy
 
 Once the entities are defined, the next step is to specify their hierarchy.
-One method and two binary methods can be used in this step.
 
-|       method       | binary |             definition             |
-| :----------------: | :----: | :--------------------------------: |
-| `#generalization:` | `--|>` | The receiver extends the parameter |
-|                    | `<|--` | The parameter extends the receiver |
+| binary |             definition             |
+| :----: | :--------------------------------: |
+| <code>--&#124;></code> | Left entity extends (inherits from) the right one |
+| <code><&#124;--</code> | Right entity extends (inherits from) the left one |
+
+Note that these symbols are actually pharo binary methods.
+One can also use a Pharo keyword method: `#generalization:` defining that the receiver extends the parameter (i.e. similar to <code>--&#124;></code>).
 
 The hierarchy is defined in the generator with the method `#defineHierarchy`.
 
@@ -128,29 +140,23 @@ In the following we present the relations and the keywords to define them.
 
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
-```st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
     package <>-* class.
-
     class <>-* attribute.
-
     method <>-* localVariable
-```
+</code>
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
-```st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
     ((package property: #classes) comment: 'The classes inside the package')
         <>-*
     ((class property: #package) comment: 'The package that contains this class').
-```
+</code>
 
 Finally, it is possible to set several other properties.
 Some be applied on one side of the relation:
@@ -183,10 +189,11 @@ DemoMetamodelGenerator>>#defineProperties
 
 ### Generate
 
-We have create our meta-model generator.
-The last step is to execute the generation with: `DemoMetamodelGenerator generate`.
+We described our meta-model.
+The last step is to actually generate it with: `DemoMetamodelGenerator generate`.
 
-If, in the futur, the generator is modified, the generation regenerates only the modified elements and remove the old one. It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
+If, later, the description of the meta-model is modified, the generation will regenerate only the modified elements and remove the old one.
+It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
 
 ## Introducing traits
 
@@ -229,21 +236,16 @@ DemoMetamodelGenerator>>#defineHierarchy
 
 Finally, we define the relations between the traits.
 
-```st
+<code>
 DemoMetamodelGenerator>>#defineRelations
-
     super defineRelations.
-
-    "package <>-* class.
-    package <>-* package."
+    package <>-* class.
+    package <>-* package.
     tWithPackages <>-* tPackageable.
-
     class <>-* attribute.
     class <>-* method.
-
-
     method <>-* localVariable
-```
+</code>
 
 It is also possible to use traits that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
@@ -322,7 +324,7 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 
 Finally, we create the relations between the interface and the methods.
 
-```st
+<code>
 DemoInterfaceMetamodelGenerator>>#defineRelations
 
     super defineRelations.
@@ -330,7 +332,7 @@ DemoInterfaceMetamodelGenerator>>#defineRelations
     ((interface property: #methods) comment: 'The methods of the interface')
         <>-*
     ((method property: #interface) comment: 'The interface that own me').
-```
+</code>
 
 ### Complementary information
 

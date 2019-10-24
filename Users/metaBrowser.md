@@ -16,4 +16,4 @@ The browser shows the hierarchy of classes to the top-left. Selecting an class s
 
 The picture below shows the browser focused on the SourcedEntity and on the sourceAnchor property.
 
-![Meta Browser](img-metaBrowser/meta-browser.png)
+![Meta Browser](meta-browser.png)
