@@ -141,21 +141,21 @@ In the following we present the relations and the keywords to define them.
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
 <code>
-DemoMetamodelGenerator>>#defineRelations
-    super defineRelations.
-    package <>-* class.
-    class <>-* attribute.
+DemoMetamodelGenerator>>#defineRelations<br>
+    super defineRelations.<br>
+    package <>-* class.<br>
+    class <>-* attribute.<br>
     method <>-* localVariable
 </code>
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
 <code>
-DemoMetamodelGenerator>>#defineRelations
-    super defineRelations.
-    ((package property: #classes) comment: 'The classes inside the package')
-        <>-*
-    ((class property: #package) comment: 'The package that contains this class').
+DemoMetamodelGenerator>>#defineRelations<br>
+    super defineRelations.<br>
+    ((package property: #classes) comment: 'The classes inside the package')<br>
+        <>-*<br>
+    ((class property: #package) comment: 'The package that contains this class').<br>
 </code>
 
 Finally, it is possible to set several other properties.
@@ -237,14 +237,14 @@ DemoMetamodelGenerator>>#defineHierarchy
 Finally, we define the relations between the traits.
 
 <code>
-DemoMetamodelGenerator>>#defineRelations
-    super defineRelations.
-    package <>-* class.
-    package <>-* package.
-    tWithPackages <>-* tPackageable.
-    class <>-* attribute.
-    class <>-* method.
-    method <>-* localVariable
+DemoMetamodelGenerator>>#defineRelations<br>
+    super defineRelations.<br>
+    package <>-* class.<br>
+    package <>-* package.<br>
+    tWithPackages <>-* tPackageable.<br>
+    class <>-* attribute.<br>
+    class <>-* method.<br>
+    method <>-* localVariable<br>
 </code>
 
 It is also possible to use traits that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
@@ -325,13 +325,12 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 Finally, we create the relations between the interface and the methods.
 
 <code>
-DemoInterfaceMetamodelGenerator>>#defineRelations
-
-    super defineRelations.
-
-    ((interface property: #methods) comment: 'The methods of the interface')
-        <>-*
-    ((method property: #interface) comment: 'The interface that own me').
+DemoInterfaceMetamodelGenerator>>#defineRelations<br>
+    super defineRelations.<br>
+<br>
+    ((interface property: #methods) comment: 'The methods of the interface')<br>
+        <>-*<br>
+    ((method property: #interface) comment: 'The interface that own me').<br>
 </code>
 
 ### Complementary information
