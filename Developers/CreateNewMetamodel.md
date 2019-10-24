@@ -150,13 +150,13 @@ DemoMetamodelGenerator>>#defineRelations
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
-<code>
-DemoMetamodelGenerator>>#defineRelations<br>
-    super defineRelations.<br>
-    ((package property: #classes) comment: 'The classes inside the package')<br>
-        <>-*<br>
-    ((class property: #package) comment: 'The package that contains this class').<br>
-</code>
+```
+DemoMetamodelGenerator>>#defineRelations
+    super defineRelations.
+    ((package property: #classes) comment: 'The classes inside the package')
+        <>-*
+    ((class property: #package) comment: 'The package that contains this class').
+```
 
 Finally, it is possible to set several other properties.
 Some be applied on one side of the relation:
@@ -236,16 +236,16 @@ DemoMetamodelGenerator>>#defineHierarchy
 
 Finally, we define the relations between the traits.
 
-<code>
-DemoMetamodelGenerator>>#defineRelations<br>
-    super defineRelations.<br>
-    package <>-* class.<br>
-    package <>-* package.<br>
-    tWithPackages <>-* tPackageable.<br>
-    class <>-* attribute.<br>
-    class <>-* method.<br>
-    method <>-* localVariable<br>
-</code>
+```
+DemoMetamodelGenerator>>#defineRelations
+    super defineRelations.
+    package <>-* class.
+    package <>-* package.
+    tWithPackages <>-* tPackageable.
+    class <>-* attribute.
+    class <>-* method.
+    method <>-* localVariable
+```
 
 It is also possible to use traits that are already defined in another meta-model (see [submetamodels](#introducing-submetamodels)).
 
@@ -324,14 +324,14 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 
 Finally, we create the relations between the interface and the methods.
 
-<code>
-DemoInterfaceMetamodelGenerator>>#defineRelations<br>
-    super defineRelations.<br>
-<br>
-    ((interface property: #methods) comment: 'The methods of the interface')<br>
-        <>-*<br>
-    ((method property: #interface) comment: 'The interface that own me').<br>
-</code>
+```
+DemoInterfaceMetamodelGenerator>>#defineRelations
+    super defineRelations.
+
+    ((interface property: #methods) comment: 'The methods of the interface')
+        <>-*
+    ((method property: #interface) comment: 'The interface that own me').
+```
 
 ### Complementary information
 
