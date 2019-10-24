@@ -1,7 +1,7 @@
 # Moose wiki  <!-- omit in toc -->
 
 A wiki gathering documentation related to Moose project.
-The main Moose source code repository on GitHub is: [https://github.com/moosetechnology]
+The main Moose source code repository on GitHub is: [https://github.com/moosetechnology](https://github.com/moosetechnology)
 
 ## Contents  <!-- omit in toc -->
 
