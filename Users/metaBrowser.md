@@ -6,10 +6,10 @@ The Meta Browser can be can be spawned from the Moose menu or by executing:
 
 ```st
 "change MyMooseModel by the model you want to browse"
-MyMooseModel browseMeta.
+MyModel browseMeta.
 
 "for example with FamixJava"
-FamixJavaMooseModel browseMeta.
+FamixJavaModel browseMeta.
 ```
 
 The browser shows the hierarchy of classes to the top-left. Selecting an class shows both the references to other classes and the primitive properties. At the bottom, a map of the overall class hierarchies is provided as a Mondrian visualization. The current selection is shown on the map in red. Furthermore, the comment of the current selection is shown to the right.
