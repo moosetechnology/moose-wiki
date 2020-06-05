@@ -14,6 +14,8 @@ You can download it from the [Pharo website.](https://pharo.org/web/download)
 
 ### Step 2 - Get Moose Image
 
+![Download Moose image](res/downloadMoose.gif)
+
 From the Pharo Launcher, you can download a Moose image.
 It corresponds to a Pharo image (see the [pharo open documentation](https://github.com/pharo-open-documentation)) with the Moose tools installed.
 
