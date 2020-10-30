@@ -10,11 +10,11 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 - For [Developers](#Developers)
 - [Other Documentation](#Other-documentation)
 
-## Beginners
+## FOR BEGINNERS
 
 - [Install Moose](Beginners/InstallMoose.md)
 
-## Users
+## FOR USERS
 
 After installing and running Moose, one typically:
 1. loads a model of a software system to perform some analyses on it;
@@ -44,7 +44,7 @@ Visualizations are build with the [Roassal tool](https://github.com/ObjectProfil
 - [Meta Browser](Users/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 
 
-## Developers
+## FOR DEVELOPERS
 
 A typical development action in Moose is to add a new programming language to the ones already understood.
 To be able to take advantage of all the existing tools, this implies writing a parser for the language ([see below](#Parsers)) and [creating a new meta-model](Developers/CreateNewMetamodel.md).
@@ -66,7 +66,7 @@ Note: they do more than parsing since they also resolve names in the parsed code
 - [FAST](Developers/Parsers/FAST.md) - Represent the AST in Famix ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 
-## Other Documentation
+## OTHER DOCUMENTATION
 
 Moose is an extensive platform for software and data analysis.
 It offers multiple services ranging from importing and parsing data, to modeling, to measuring, querying, mining, and to building interactive and visual analysis tools. 
