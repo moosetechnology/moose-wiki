@@ -40,7 +40,9 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
+
   ![Access UML diagram](Diagrams/access.png)
+
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
