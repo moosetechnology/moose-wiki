@@ -1,0 +1,1 @@
+@startumlhide empty membersclass behavior1 as "TReference" << (T,orchid) >> {}class behavior2 as "TReferenceable" << (T,orchid) >> {}class behavior3 as "TWithReferences" << (T,orchid) >> {}behavior1 "incomingReferences * " -[#black]- "referredType  " behavior2behavior1 "outgoingReferences * " -[#black]- "referencer  " behavior3@enduml
