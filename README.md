@@ -5,10 +5,10 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 
 ## Contents  <!-- omit in toc -->
 
-- For [Beginners](#Beginners)
-- For [Users](#Users)
-- For [Developers](#Developers)
-- [Other Documentation](#Other-documentation)
+- For [Beginners](#For-Beginners)
+- For [Users](#For-Users)
+- For [Developers](#For-Developers)
+- [Other Documentation](#Other-Documentation)
 
 ## FOR BEGINNERS
 
