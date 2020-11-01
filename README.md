@@ -7,7 +7,7 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 
 - For [Beginners](#Beginners)
 - For [Users](#Users)
-- For [Developers](#Developers)
+- For [Developers](#for-Developers)
 - [Other Documentation](#Other-documentation)
 
 ## FOR BEGINNERS
