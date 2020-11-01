@@ -40,10 +40,21 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
+
   ![Access UML diagram](Diagrams/access.png)
+
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
+
+  ![Inheritance UML diagram](Diagrams/inheritance.png)
+
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
+
+  ![Invocation UML diagram](Diagrams/invocation.png)
+
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
+
+  ![Reference UML diagram](Diagrams/reference.png)
+
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
 
 To these five we added two more specialized "associations":
@@ -51,7 +62,12 @@ To these five we added two more specialized "associations":
 These do not reify the association as a separate entity, but they might do in the future.
 For now there are only two traits to put at each end of the relationship:
 - `FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`
+
+  ![DereferenceInvocation UML diagram](Diagrams/derefInvok.png)
+
 - `FamixTFileInclude` and `FamixTWithFileInclude`
+
+  ![FileInclude UML diagram](Diagrams/fileInclude.png)
 
 
 ## Technical Traits
