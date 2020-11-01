@@ -1,0 +1,1 @@
+@startumlhide empty membersskinparam class {  BackgroundColor white  ArrowColor black  BorderColor darkGray}class behavior1 as "TWithDereferencedInvocations" << (T,lightGrey) >> {}class behavior2 as "TDereferencedInvocation" << (T,lightGrey) >> {}behavior2 "dereferencedInvocations * " -[#black]- "referencer  " behavior1@enduml

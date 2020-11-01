@@ -1,0 +1,1 @@
+@startumlhide empty membersskinparam class {  BackgroundColor white  ArrowColor black  BorderColor darkGray}class behavior1 as "TTrait" << (T,lightGrey) >> {}class behavior2 as "TTraitUsage" << (T,lightGrey) >> {}behavior1 "trait  " -[#black]- "incomingTraitUsages * " behavior2behavior1 "traits * " -[#black]- "traitOwner  " behavior3@enduml
