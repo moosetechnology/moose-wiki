@@ -40,7 +40,7 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
-    ![UML](https://img.shields.io/static/v1?message=UML&color=informational&link=Diagrams/access.png)
+   ![UML](https://img.shields.io/static/v1?label=external&message=UML&color=informational&link=http://./Diagrams/access.png)
 
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
   [UML](Diagrams/inheritance.png)
