@@ -64,10 +64,14 @@ There are different (so called) parsers already created at various stages of pro
 
 Note: they do more than parsing since they also resolve names in the parsed code and this is not a small task.
 
-- [Petit Parser](https://github.com/moosetechnology/PetitParser) - Write easily a Parser with Moose ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
-- [VerveineJ](Developers/Parsers/VerveineJ.md) - Generate an mse from a Java project ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
-- [PowerBuilderParser](Developers/Parsers/PowerBuilderParser.md) - Generate an mse from a Powerbuilder project ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
-- [FAST](Developers/Parsers/FAST.md) - Represent the AST in Famix ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [Petit Parser](https://github.com/moosetechnology/PetitParser) - Write easily a Parser with Moose 
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [VerveineJ](Developers/Parsers/VerveineJ.md) - Generate an mse from a Java project
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [PowerBuilderParser](Developers/Parsers/PowerBuilderParser.md) - Generate an mse from a Powerbuilder project
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
+- [FAST](Developers/Parsers/FAST.md) - Represent the AST in Famix
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 
 
 ## OTHER DOCUMENTATION
@@ -78,4 +82,6 @@ It offers multiple services ranging from importing and parsing data, to modeling
 The following resources are also useful to understand Moose:
 
 - [Moose Technology](http://moosetechnology.org/) - the main web site for Moose.
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [The Moose Book](http://themoosebook.org/) - a tutorial for using Moose to analyze Java source code (Moose 6).
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
