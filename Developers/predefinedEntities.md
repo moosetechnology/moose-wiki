@@ -66,7 +66,7 @@ They do not model programming language entities but are used to implement Moose 
 
 Currently, this includes several types of `FamixTSourceAnchors` that allow recovering the source code of the entities.
 A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.
-[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/access.png)
+[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/anchor.png)
 
 *Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`) or means to model the programming language used (all `SourceLanguage`)
 [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/technic.png)
