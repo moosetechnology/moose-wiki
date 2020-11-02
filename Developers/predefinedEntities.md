@@ -62,9 +62,17 @@ For now there are only two traits to put at each end of the relationship:
 ## Technical Traits
 
 They do not model programming language entities but are used to implement Moose functionalities.
+
 Currently, this includes several types of `FamixTSourceAnchors` that allow recovering the source code of the entities.
 A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.
-Other *Technical traits* implement software engineering metric computation, or are used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).
+[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/access.png)
+
+*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`) or means to model the programming language used (all `SourceLanguage`)
+[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/technic.png)
+
+Finally, *Technical traits* are used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).
+
+
 
 ## Property Traits
 
