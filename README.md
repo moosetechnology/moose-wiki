@@ -50,8 +50,12 @@ A typical development action in Moose is to add a new programming language to th
 To be able to take advantage of all the existing tools, this implies writing a parser for the language ([see below](#Parsers)) and [creating a new meta-model](Developers/CreateNewMetamodel.md).
 There are also other possible actions.
 
+- [Library of pre- defined entites/traits](Developers/predefinedEntities.md)
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat)
 - [Creating a meta-model](Developers/CreateNewMetamodel.md).
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 - [Define baseline loading moose](Developers/DefineBaselineLoadingMoose.md) for your own projects
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 
 ### Parsers
 
