@@ -58,11 +58,11 @@ To be able to take advantage of all the existing tools, this implies writing a p
 There are also other possible actions.
 
 - [Library of pre- defined entites/traits](Developers/predefinedEntities.md)
-  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 - [Creating a meta-model](Developers/CreateNewMetamodel.md).
-  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 - [Define baseline loading moose](Developers/DefineBaselineLoadingMoose.md) for your own projects
-  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 
 ### Parsers
 
@@ -74,11 +74,11 @@ Note: they do more than parsing since they also resolve names in the parsed code
 - [Petit Parser](https://github.com/moosetechnology/PetitParser) - Write easily a Parser with Moose 
   ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [VerveineJ](Developers/Parsers/VerveineJ.md) - Generate an mse from a Java project
-  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 - [PowerBuilderParser](Developers/Parsers/PowerBuilderParser.md) - Generate an mse from a Powerbuilder project
-  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 - [FAST](Developers/Parsers/FAST.md) - Represent the AST in Famix
-  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow
+  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 
 
 ## OTHER DOCUMENTATION
