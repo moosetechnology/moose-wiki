@@ -48,6 +48,7 @@ There are five full fledged associations in FamixNG:
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/reference.png)
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/usetrait.png)
 
 To these five we added two more specialized "associations":
 `DereferencedInvocation` (call of a pointer to a function in C) and `FileInclude` (also in C).
