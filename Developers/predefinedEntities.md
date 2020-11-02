@@ -40,16 +40,16 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
-  [![UML](https://img.shields.io/badge/-UML-information)](Diagrams/access.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/access.png)
 
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
-  [![UML](https://img.shields.io/badge/-UML-information)](Diagrams/inheritance.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/inheritance.png)
 
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
-  [![UML](https://img.shields.io/badge/-UML-information)](Diagrams/invocation.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/invocation.png)
 
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
-  [![UML](https://img.shields.io/badge/-UML-information)](Diagrams/reference.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/reference.png)
 
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
 
