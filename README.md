@@ -17,31 +17,38 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 ## FOR USERS
 
 After installing and running Moose, one typically:
-1. loads a model of a software system to perform some analyses on it;
-1. performs some queries on the model
-1. builds some visualization of the model
+1. [loads a model](#loading-a-model) of a software system to perform some analyses on it;
+1. performs some [queries](#performing-queries) on the model
+1. builds some [visualization](#visualizing-a-model) of the model
 
 ### Loading a model
 
 A popular meta-model is the Java meta-model:
-- [Famix Maker](https://github.com/moosetechnology/Moose-Easy) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
-- [Analyse Java Project](https://fuhrmanator.github.io/2019/07/29/AnalyzingJavaWithMoose.html) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [Famix Maker](https://github.com/moosetechnology/Moose-Easy)
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [Analyse Java Project](https://fuhrmanator.github.io/2019/07/29/AnalyzingJavaWithMoose.html)
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 You may also use models for other programming languages (see also the [Parsers](#Parsers) section):
-- [Importing and exporting models](Users/ImportingAndExportingModels.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [Importing and exporting models](Users/ImportingAndExportingModels.md)
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 
 ### Performing queries
 
-- [Moose Query](https://moosequery.ferlicot.fr/) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
-- [Tree Query](https://github.com/juliendelplanque/TreeQuery) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [Moose Query](https://moosequery.ferlicot.fr/)
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
+- [Tree Query](https://github.com/juliendelplanque/TreeQuery)
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ### Visualizing a model
 
 Visualizations are build with the [Roassal tool](https://github.com/ObjectProfile/Roassal3.git)
+  ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ### More advanced tools
 
-- [Meta Browser](Users/metaBrowser.md) ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
+- [Meta Browser](Users/metaBrowser.md)
+  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple.svg?style=flat)
 
 
 ## FOR DEVELOPERS
