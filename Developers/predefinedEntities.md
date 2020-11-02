@@ -58,12 +58,10 @@ To these five we added two more specialized "associations":
 These do not reify the association as a separate entity, but they might do in the future.
 For now there are only two traits to put at each end of the relationship:
 - `FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`
-
-  ![DereferenceInvocation UML diagram](Diagrams/derefInvok.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/derefInvok.png)
 
 - `FamixTFileInclude` and `FamixTWithFileInclude`
-
-  ![FileInclude UML diagram](Diagrams/fileInclude.png)
+  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/fileInclude.png)
 
 
 ## Technical Traits
