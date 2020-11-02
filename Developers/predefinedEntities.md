@@ -40,13 +40,13 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/access.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/access.png)
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/inheritance.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/inheritance.png)
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/invocation.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/invocation.png)
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/reference.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/reference.png)
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
 
 To these five we added two more specialized "associations":
@@ -54,9 +54,9 @@ To these five we added two more specialized "associations":
 These do not reify the association as a separate entity, but they might do in the future.
 For now there are only two traits to put at each end of the relationship:
 - `FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/derefInvok.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/derefInvok.png)
 - `FamixTFileInclude` and `FamixTWithFileInclude`
-  [![UML](https://img.shields.io/badge/external-UML-information)](Diagrams/fileInclude.png)
+  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/fileInclude.png)
 
 
 ## Technical Traits
