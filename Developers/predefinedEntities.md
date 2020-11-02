@@ -4,24 +4,24 @@ To analyse a system in a given programming language, Moose must have a meta-mode
 For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
 The meta-model describes the entities that compose a program in the given language and how they are related.
 
-In [another page](CreateNewMetamodel.md), we explain how to create new entities, define relationships, properties, etc.
+In another page, we explain how to [define a meta-model](CreateNewMetamodel.md): create new entities, define relationships, properties, etc.
 In this page, we present the library of predefined entities that is part of FamixNG and helps declaring new entities by offering typical properties / relationships needed.
 
 In FamixNG, recurrent properties are modelled into traits.
 New entities are created as classes composed from these existing traits.
-Some common entities (like classes) pre-composed with common traits are also defined.
-We list here all traits available.
+Some common entities (like Packages) are also proposed, pre-composed with common traits.
+We list here all currently traits available.
 
 FamixNG is still under developement and the library of available traits is not completly stabilised.
-The following should nevertheless help user to make sense of the more than one hundred traits available.
+The following should nevertheless help user make sense of the more than one hundred traits available.
 
 ## Categories of traits
 
 First, one can divide the set of traits in four categories:
-- Associations
-- Technical
-- Property
-- Terminal
+- [Associations](#association-traits)
+- [Technical](#technical-traits)
+- [Property](#property-traits)
+- [Terminal](#terminal-traits)
 
 They are described in the following
 
@@ -40,20 +40,16 @@ Using an association involves:
 
 There are five full fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
-
-  ![Access UML diagram](Diagrams/access.png)
+  [UML](Diagrams/access.png)
 
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
-
-  ![Inheritance UML diagram](Diagrams/inheritance.png)
+  [UML](Diagrams/inheritance.png)
 
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
-
-  ![Invocation UML diagram](Diagrams/invocation.png)
+  [UML](Diagrams/invocation.png)
 
 - `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
-
-  ![Reference UML diagram](Diagrams/reference.png)
+  [UML](Diagrams/reference.png)
 
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
 
