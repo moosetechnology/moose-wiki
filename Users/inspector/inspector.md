@@ -11,7 +11,7 @@ In the following, we will present the main features.
   - [Navigating in the model](#navigating-in-the-model)
 - [Inspecting an entity](#inspecting-an-entity)
 - [Inspecting a specialized group](#inspecting-a-specialized-group)
-- [Create its own plugins](#create-its-own-plugins)
+- [Creating its plugins](#creating-its-plugins)
 
 ## Browsing a model
 
@@ -47,4 +47,16 @@ To navigate, you only need to click on an item of the shown list.
 
 ## Inspecting a specialized group
 
-## Create its own plugins
+The inspector also offers several visualizations for the groups of concepts.
+For instance, it is easy to visualize the hierarchy/system complexity of a group of class or its UML.
+
+To do so, one needs:
+
+1. navigate a group of classes
+2. select the interesting classes *(optional)*
+3. transform the moose group into a moose specialized group
+4. use the moose extension
+
+![Example to show system complexity](system-complexity.gif)
+
+## Creating its plugins
