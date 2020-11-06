@@ -42,7 +42,7 @@ You may also use models for other programming languages (see also the [Parsers](
 
 ### Visualizing a model
 
-Visualizations are build with the [Roassal tool](https://github.com/ObjectProfile/Roassal3.git)
+Visualizations are built with the [Roassal tool](https://github.com/ObjectProfile/Roassal3.git)
   ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 ### More advanced tools
@@ -59,7 +59,7 @@ There are also other possible actions.
 
 - [Library of pre- defined entites/traits](Developers/predefinedEntities.md)
   ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
-- [Creating a meta-model](Developers/CreateNewMetamodel.md).
+- [Creating a meta-model](Developers/CreateNewMetamodel.md)
   ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 - [Define baseline loading moose](Developers/DefineBaselineLoadingMoose.md) for your own projects
   ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
