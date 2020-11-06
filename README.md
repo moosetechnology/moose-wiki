@@ -47,8 +47,8 @@ Visualizations are build with the [Roassal tool](https://github.com/ObjectProfil
 
 ### More advanced tools
 
+- [Inspector](Users/inspector/inspector.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 - [Meta Browser](Users/metaBrowser.md)
-  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 
 
 ## FOR DEVELOPERS
@@ -78,8 +78,6 @@ Note: they do more than parsing since they also resolve names in the parsed code
 - [PowerBuilderParser](Developers/Parsers/PowerBuilderParser.md) - Generate an mse from a Powerbuilder project
   ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 - [FAST](Developers/Parsers/FAST.md) - Represent the AST in Famix
-  ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
-
 
 ## OTHER DOCUMENTATION
 
