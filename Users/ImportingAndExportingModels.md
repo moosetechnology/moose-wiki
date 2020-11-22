@@ -14,7 +14,7 @@ Visually, the model appears in the list of models from the Moose Panel.
 Another way is to import the model from a playground by executing (in the case of a FamixJava model):
 
 ```st
-FamixJavaMooseModel importMSEFromStream: ('./path/to/string' asFileReference readStream).
+FamixJavaModel importMSEFromStream: ('./path/to/string' asFileReference readStream).
 ```
 
 But what exactly is MSE?
