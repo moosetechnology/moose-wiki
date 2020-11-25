@@ -1,7 +1,7 @@
 # Predefined Entities / Traits in FamixNG <!-- omit in toc -->
 
 To analyse a system in a given programming language, Moose must have a meta-model for that language.
-For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
+For example for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
 The meta-model describes the entities that compose a program in the given language and how they are related.
 
 In another page, we explain how to [define a meta-model](CreateNewMetamodel.md): create new entities, define relationships, properties, etc.
@@ -12,33 +12,33 @@ New entities are created as classes composed from these existing traits.
 Some common entities (like Packages) are also proposed, pre-composed with common traits.
 We list here all currently traits available.
 
-FamixNG is still under developement and the library of available traits is not completly stabilised.
-The following should nevertheless help user make sense of the more than one hundred traits available.
+FamixNG is still under developement and the library of available traits is not completely stabilized.
+The following should nevertheless help users make sense of the more than one hundred traits available.
 
 ## Categories of traits
 
-First, one can divide the set of traits in four categories:
-- [Associations](#association-traits)
+First, one can divide the set of traits into four categories:
+- [Association](#association-traits)
 - [Technical](#technical-traits)
 - [Property](#property-traits)
 - [Terminal](#terminal-traits)
 
-They are described in the following
+They are described as follows:
 
 ## Association Traits
 
 They model the fact that an entity is used (referred to) in the source code.
-Such reference creates an association between the entity that uses (refers) and the one that is used (referred to).
+Such a reference creates an association between the entity that uses (refers to) and the one that is used (is referred to).
 This includes the four associations of the old Famix: Inheritance, Invocation (of a function or a method), Access (to a variable), and Reference (to a type).
 
 Associations should be thought of as n-to-m relationhips between entities.
 For that reason, they are reified into their own traits.
 Associations define two roles (`from` and `to`) to identify both ends of the association.
 Using an association involves:
-- defining a class representing the association (for example Access, using the trait FamixTAccess)
-- defining two classes at each end of the association (for example Function using the trait FamixTWithAccess, and Variable using the trait FamixTAccessible).
+- defining a class representing the association (for example, Access, using the trait FamixTAccess)
+- defining two classes at each end of the association (for example, Function using the trait FamixTWithAccess, and Variable using the trait FamixTAccessible).
 
-There are five full fledged associations in FamixNG:
+There are five full-fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/access.png)
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
@@ -52,7 +52,7 @@ There are five full fledged associations in FamixNG:
 
 To these five we added two more specialized "associations":
 `DereferencedInvocation` (call of a pointer to a function in C) and `FileInclude` (also in C).
-These do not reify the association as a separate entity, but they might do in the future.
+These do not reify the association as a separate entity, but they might do so in the future.
 For now there are only two traits to put at each end of the relationship:
 - `FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/derefInvok.png)
@@ -68,7 +68,7 @@ Currently, this includes several types of `FamixTSourceAnchors` that allow recov
 A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.
 [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/anchor.png)
 
-*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or means to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).
+*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or ways to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).
 [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/technic.png)
 
 ## Property Traits
