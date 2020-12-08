@@ -1,11 +1,11 @@
 # Create a new Meta-model (FamixNG: since Moose 7) <!-- omit in toc -->
 
 To analyse a system in a given programming language, Moose must have a meta-model for that language.
-For exemple for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
+For example for Java, the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
 The meta-model describes the entities that compose a program in the given language and how they are related.
 
 In the following, we describe how to create a new meta-model or extend an existing one.
-Moose being more specifically dedicated to source code analysis, there is a number of pre-set entities/traits that should help one define new meta-models for a given programming language.
+Moose being more specifically dedicated to source code analysis, there are a number of pre-set entities/traits that should help one define new meta-models for a given programming language.
 These are described in [another page](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
 
 
@@ -49,7 +49,7 @@ DemoMetamodelGenerator class >> #packageName
     ^ #'Demo-Model-generated'
 ```
 
-By default the package name will be used as prefix for the generated classes.
+By default the package name will be used as a prefix for the generated classes.
 But we can specify a custom prefix by defining the method `#prefix`.
 
 ```st
@@ -62,7 +62,7 @@ DemoMetamodelGenerator class >> #prefix
 
 In this section, we will see how to create a simple meta-model.
 
-To design a meta-model, we need to specify its entities, theirs relations and theirs properties.
+To design a meta-model, we need to specify its entities, their relations and their properties.
 
 You may also consult a [presentation of Famix generator](https://www.slideshare.net/JulienDelp/famix-nextgeneration) from Julien Delplanque.
 
@@ -104,8 +104,8 @@ Once the entities are defined, the next step is to specify their hierarchy.
 | <code>--&#124;></code> | Left entity extends (inherits from) the right one |
 | <code><&#124;--</code> | Right entity extends (inherits from) the left one |
 
-Note that these symbols are actually pharo binary methods.
-One can also use a Pharo keyword method: `#generalization:` defining that the receiver extends the parameter (i.e. similar to <code>--&#124;></code>).
+Note that these symbols are actually Pharo binary methods.
+One can also use a Pharo keyword method: `#generalization:` defining that the receiver extends the parameter (i.e., similar to <code>--&#124;></code>).
 
 The hierarchy is defined in the generator with the method `#defineHierarchy`.
 
@@ -124,7 +124,7 @@ DemoMetamodelGenerator>>#defineHierarchy
 ### Define relations
 
 Then we will define the relations between the entities.
-Multiple relations are available in the famix.
+Multiple relations are available in Famix.
 In the following we present the relations and the keywords to define them.
 
 |      method       | binary |
@@ -159,14 +159,14 @@ DemoMetamodelGenerator>>#defineRelations
 ```
 
 Finally, it is possible to set several other properties.
-Some be applied on one side of the relation:
+Some may be applied on one side of the relation:
 
 - container _(the side "contains" the other one, see the different keyword)_
 - derived _(the relation is not part of the model but is computed)_
 - source _(source of an association)_
 - target _(source of an association)_
 
-Others can be applied on the relation:
+Others can be applied on the relation itself:
 
 - withoutPrimaryContainer _(Since an element can only have one container, it allows one to create another containment relation. This relation will not set the method `#belongsTo`)_
 - withNavigation _(force the relation to appear in the Moose Playground)_
@@ -176,7 +176,7 @@ Others can be applied on the relation:
 The last step before generating the model is the definition of the properties of the entities.
 A property can be of any type.
 It is also possible to define a comment for each property.
-Let's create the method `#defineProperties` in our generator
+Let's create the method `#defineProperties` in our generator:
 
 ```st
 DemoMetamodelGenerator>>#defineProperties
@@ -189,20 +189,21 @@ DemoMetamodelGenerator>>#defineProperties
 
 ### Generate
 
-We described our meta-model.
+We have described our meta-model.
 The last step is to actually generate it with: `DemoMetamodelGenerator generate`.
 
-If, later, the description of the meta-model is modified, the generation will regenerate only the modified elements and remove the old one.
-It is possible to execute a full clean of the model before its generation with: `DemoMetamodelGenerator generateWithCleaning`.
+Later, if the description of the meta-model is modified, the generation will only regenerate the modified elements and remove the old ones.
+It is possible to force a full (clean) generation of the model with: `DemoMetamodelGenerator generateWithCleaning`.
 
 ## Introducing traits
 
-In addition of the entity, we can use trait to add information in the meta-model.
-The traits are defined in the same way as the entities.
-In our previous example, the classes are inside a package.
-However, we forgot that a package can also contain another package.
+In addition to the entities, we can use traits to add information to the meta-model.
+Traits are a flexible tool to avoid problems with multiple inheritance.
+Traits are defined in the same way as entities.
+In our previous example, classes are inside a package.
+However, we forgot that a package can also contain another package, and we need to model that.
 
-First of all we need to define the traits to create the containment relation of a package.
+First of all, we need to define the traits to create the containment relation of a package.
 We declare the trait in the method `#defineTraits`.
 
 ```st
@@ -256,11 +257,11 @@ It allows one to extend or compose several meta-models.
 
 There are two way of extending of meta-model:
 
-1. Create a generator that extends the first one
-2. Create a separate generator that declare another as submetamodel.
+1. Create a generator that extends the first one.
+2. Create a separate generator that declares another as submetamodel.
 
-Despite the first one can be used, when the meta-model is generated, the entities that comes from the extended generator will be created two times, in the new generator and in the old one.
-So, the best way to extends a meta-model is to use the submetamodels.
+Although the first one can be used, when the meta-model is generated, the entities that come from the extended generator will be created two times, in the new generator and in the old one.
+So, the best way to extend a meta-model is to use the submetamodels.
 In the following, we present how to configure a generator for submetamodels.
 
 ### Set up submetamodels
@@ -268,9 +269,9 @@ In the following, we present how to configure a generator for submetamodels.
 In this example, we will create a new generator that will add the interface entity that will be use to represent an interface.
 The interface is packageable and contain methods.
 
-> Note that it is done in an example. The best way in this case would be to modify the previous generator
+> Note that it is done in an example. The best way in this case would be to modify the previous generator.
 
-First of all, we create a new generator.
+First of all, we create a new generator:
 
 ```st
 FamixMetamodelGenerator subclass: #DemoInterfaceMetamodelGenerator
@@ -279,7 +280,7 @@ FamixMetamodelGenerator subclass: #DemoInterfaceMetamodelGenerator
     package: 'Demo-InterfaceModel-Generator'
 ```
 
-Then we declare our previous generator as submetamodel
+Then we declare our previous generator as submetamodel:
 
 ```st
 DemoInterfaceMetamodelGenerator class >> #submetamodels
@@ -287,12 +288,11 @@ DemoInterfaceMetamodelGenerator class >> #submetamodels
     ^ { DemoMetamodelGenerator }
 ```
 
-> We also have to define the `#prefix` and the `#packageName`
+> We also have to define the `#prefix` and the `#packageName`.
 
 ### Define remote entities and traits
 
-Once the generator is configured we can define the entities of the AST meta-model and
-    the entities that come from the Demo meta-model.
+Once the generator is configured we can define the entities of the AST meta-model and the entities that come from the Demo meta-model.
 To define an entity of another meta-model we used the method `#remoteEntity:withPrefix:`.
 The prefix is then the prefix defined for the submetamodel.
 
@@ -305,12 +305,12 @@ DemoInterfaceMetamodelGenerator>>#defineEntities
     method := self remoteEntity: #Method withPrefix: #Demo.
 ```
 
-> In some case, it may be necessary to define remote trait. Use the method `#remoteTrait:withPrefix:` on the generator
+> In some cases, it may be necessary to define remote traits. Use the method `#remoteTrait:withPrefix:` on the generator.
 
 ### Define remote hierarchy
 
-To represent the relation of containment of a package on an interface we use the trait `#TPackageable` (see [Introducing traits](#introducing-traits)).
-Because there is only one trait with this name in the submetamodels, we can use the notation with the symbol instead of defining it in a variable in the "defineEntities" section.
+To represent the relation of containment of a package on an interface, we use the trait `#TPackageable` (see [Introducing traits](#introducing-traits)).
+Because there is only one trait with this name in the submetamodels, we can use the notation with the symbol instead of defining it in a variable in the "defineEntities" section:
 
 ```st
 DemoInterfaceMetamodelGenerator>>#defineHierarchy
@@ -322,7 +322,7 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 
 ### Define remote relations
 
-Finally, we create the relations between the interface and the methods.
+Finally, we create the relations between the interface and the methods:
 
 ```
 DemoInterfaceMetamodelGenerator>>#defineRelations
@@ -335,9 +335,9 @@ DemoInterfaceMetamodelGenerator>>#defineRelations
 
 ### Complementary information
 
-In our example, an interface contain methods and a class contain methods too.
-However, it is not possible to have to main container for an entity (see [Define relations](#define-relations)).
-In this case, we can either declare the relation "interface <>-* method" without primary container or define
+In our example, an interface contains methods and a class contains methods, too.
+However, it is not possible to have *two* main containers for an entity (see [Define relations](#define-relations)).
+In this case, we can either declare the relation "interface <>-* method" without a primary container, or define
 two Traits in the first meta-model.
 One would be `#TMethod` and the other `#TWithMethods`.
 
