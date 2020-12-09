@@ -16,7 +16,17 @@ git clone git@github.com:moosetechnology/VerveineJ.git
 
 ## Usage
 
+### Quick start
+
 To use VerveineJ, you can use [Famix Maker](https://github.com/moosetechnology/Moose-Easy) ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue) or from a terminal.
+
+Or you can use command line as follows:
+
+```sh
+./verveinej.sh -o MyProject.mse -autocp ../MyProjectDependenciesOrLib/ ../MyProjectSrcFolder/
+```
+
+### Options
 
 In the following, we describe the option of VerveineJ.
 
