@@ -33,6 +33,41 @@ Here, we will not detail the JSON format but how it **must** be used to be loade
 ]
 ```
 
+A model is represented as a collection of entities (`[ <entities> ]`).
+Each entity has a type (the class that will be created).
+In the file, the name of the property is the value of the property *FM3*.
+This Json property **must** be the first property of an entity.
+Whereas this does not follow JSON guidelines, it offers better performance.
+
+
+> FM3 means Fame3. It is in reference to Fame, the meta-meta-model used in Moose.
+
+```json
+{
+  "FM3": "EntityTypeName"
+}
+```
+
+An entity has also an optional unique *id* used when an entity refers to another.
+Note that the *id* **must** arrive right after the *FM3* property.
+Whereas it does not follow JSON guidelines, it offers better performance.
+
+```json
+{
+  "FM3": "EntityTypeName",
+  "id": 42
+}
+```
+
+Then, the entity has several properties.
+Properties can be:
+
+- String (`"name": "a string property"`)
+- Integer (`"line of code": 42`)
+- Float (`"complexity": 42.2`)
+- Another entity (`"parentClass": { "FM3": "Famix-Java-Entities.Class", "id": 3 }`)
+- Reference to another entity (`"parentClass": { "ref": 3}`)
+
 ## MSE
 
 MSE is the default file format supported by Moose.
