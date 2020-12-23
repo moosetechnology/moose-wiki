@@ -17,7 +17,7 @@ Another way is to import the model from a playground by executing (in the case o
 FamixJavaModel importMSEFromStream: ('./path/to/string' asFileReference readStream).
 ```
 
-More information about MSE are available [here](./fileFormat.md#MSE).
+More information about MSE are available [here](./fileFormat.md#mse).
 
 Once a model is loaded, it can be easily exported as an MSE file.
 This can be done via the contextual menu of the model.
