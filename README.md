@@ -32,6 +32,7 @@ A popular meta-model is the Java meta-model:
 You may also use models for other programming languages (see also the [Parsers](#Parsers) section):
 - [Importing and exporting models](Users/ImportingAndExportingModels.md)
   ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
+- [Moose supported file format](./Users/fileFormat.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 
 ### Performing queries
 
