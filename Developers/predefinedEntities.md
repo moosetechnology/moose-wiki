@@ -41,38 +41,32 @@ Using an association involves:
 
 There are five full-fledged associations in FamixNG:
 
-| Association            |UML ![UML](https://img.shields.io/badge/external-UML-green) |
-|:-|:-|
-|`FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)</p></details> |
-|`FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/inheritance.puml&fmt=svg)</p></details> |
-|`FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/invocation.puml&fmt=svg)</p></details> |
-|`FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/reference.puml&fmt=svg)</p></details> |
-|`FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/usetrait.puml&fmt=svg)</p></details> |
-
+- `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)</p></details>
+- `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/inheritance.puml&fmt=svg)</p></details>
+- `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/invocation.puml&fmt=svg)</p></details>
+- `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/reference.puml&fmt=svg)</p></details>
+- `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/usetrait.puml&fmt=svg)</p></details> 
 
 To these five we added two more specialized "associations":
 `DereferencedInvocation` (call of a pointer to a function in C) and `FileInclude` (also in C).
 These do not reify the association as a separate entity, but they might do so in the future.
 For now there are only two traits to put at each end of the relationship:
 
-| Specialized association            |UML ![UML](https://img.shields.io/badge/external-UML-green) |
-|:-|:-|
-|`FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/derefInvok.puml&fmt=svg)</p></details> |
-|`FamixTFileInclude` and `FamixTWithFileInclude`|<details><summary>Click </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/fileInclude.puml&fmt=svg)</p></details> |
-
+- `FamixTDereferencedInvocation` and `FamixTWithDereferencedInvocations`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/derefInvok.puml&fmt=svg)</p></details>
+- `FamixTFileInclude` and `FamixTWithFileInclude`<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/fileInclude.puml&fmt=svg)</p></details>
 
 ## Technical Traits
 
 Technical traits do not model programming language entities but are used to implement Moose functionalities.
 
 Currently, this includes several types of `FamixTSourceAnchors` that allow recovering the source code of the entities.
-A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green) </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/anchor.puml&fmt=svg)</p></details>
+A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/anchor.puml&fmt=svg)</p></details>
 
-*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or ways to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green) </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/technic.puml&fmt=svg)</p></details>
+*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or ways to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).<details><summary>View UML</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/technic.puml&fmt=svg)</p></details>
 
 ## Property Traits
 
-They model composable properties that source code entities may possess.
+Property traits model composable properties that source code entities may possess.
 Some examples are `FamixTNamedEntity` (entities that have a name), `FamixTTypedEntity` (entities that are statically typed), or a number of entities modeling ownership: `FamixTWithGlobalVariables` (entities that can own `FamixTGlobalVariables`), `FamixTWithFunctions` (entities that can own `FamixTFunctions`), ... 
 
 There are 46 *property traits* currently in FamixNG including 38 traits modeling ownership of various possible kind of entities (`FamixTWith...`).
