@@ -18,10 +18,11 @@ The following should nevertheless help users make sense of the more than one hun
 ## Categories of traits
 
 First, one can divide the set of traits into four categories:
-- [Association](#association-traits)
-- [Technical](#technical-traits)
-- [Property](#property-traits)
-- [Terminal](#terminal-traits)
+- [Categories of traits](#categories-of-traits)
+- [Association Traits](#association-traits)
+- [Technical Traits](#technical-traits)
+- [Property Traits](#property-traits)
+- [Terminal Traits](#terminal-traits)
 
 They are described as follows:
 
@@ -31,7 +32,7 @@ They model the fact that an entity is used (referred to) in the source code.
 Such a reference creates an association between the entity that uses (refers to) and the one that is used (is referred to).
 This includes the four associations of the old Famix: Inheritance, Invocation (of a function or a method), Access (to a variable), and Reference (to a type).
 
-Associations should be thought of as n-to-m relationhips between entities.
+Associations should be thought of as n-to-m relationships between entities.
 For that reason, they are reified into their own traits.
 Associations define two roles (`from` and `to`) to identify both ends of the association.
 Using an association involves:
@@ -40,7 +41,14 @@ Using an association involves:
 
 There are five full-fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`
-  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/access.png)
+<details><summary>
+![UML](https://img.shields.io/badge/external-UML-green)
+</summary>
+<p>
+![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)
+</p>
+</details>
+
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/inheritance.png)
 - `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
@@ -49,6 +57,7 @@ There are five full-fledged associations in FamixNG:
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/reference.png)
 - `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/usetrait.png)
+
 
 To these five we added two more specialized "associations":
 `DereferencedInvocation` (call of a pointer to a function in C) and `FileInclude` (also in C).
