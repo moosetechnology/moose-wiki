@@ -41,8 +41,8 @@ Using an association involves:
 
 There are five full-fledged associations in FamixNG:
 - `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible` <details><summary>Click to view 
-![UML](https://img.shields.io/badge/external-UML-green)
-</summary><p>
+![UML](https://img.shields.io/badge/external-UML-green)</summary>
+<p>
 
 ![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)  
 
