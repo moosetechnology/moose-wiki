@@ -44,15 +44,10 @@ There are five full-fledged associations in FamixNG:
 | Association            |UML|
 |:-|:-|
 |`FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`|<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)</p></details> |
-
-- `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
-  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/inheritance.png)
-- `FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`
-  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/invocation.png)
-- `FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`
-  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/reference.png)
-- `FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`
-  [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/usetrait.png)
+|`FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`|<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/inheritance.puml&fmt=svg)</p></details> |
+|`FamixTInvocation`, from: `FamixTWithInvocation`, to: `FamixTInvocable`, for OO programs, there is an extra receiver: `FamixTInvocationReceiver`|<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/invocation.puml&fmt=svg)</p></details> |
+|`FamixTReference`, from: `FamixTWithReferences`, to: `FamixTReferenceable`|<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/reference.puml&fmt=svg)</p></details> |
+|`FamixTTraitUsage`, from: `FamixTWithTrait`, to: `FamixTTrait`|<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/usetrait.puml&fmt=svg)</p></details> |
 
 
 To these five we added two more specialized "associations":
