@@ -63,14 +63,12 @@ For now there are only two traits to put at each end of the relationship:
 
 ## Technical Traits
 
-They do not model programming language entities but are used to implement Moose functionalities.
+Technical traits do not model programming language entities but are used to implement Moose functionalities.
 
 Currently, this includes several types of `FamixTSourceAnchors` that allow recovering the source code of the entities.
-A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.
-[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/anchor.png)
+A typical `FamixTSourceAnchor` contains a filename, and start and end positions in this file.<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green) </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/anchor.puml&fmt=svg)</p></details>
 
-*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or ways to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).
-[![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/technic.png)
+*Technical traits* may also implement software engineering metric computation (`TLCOMMetrics`), or ways to model the programming language used (all `SourceLanguage`), or be  used to implement the generic [MooseQuery engine](https://moosequery.ferlicot.fr/).<details><summary>Click ![UML](https://img.shields.io/badge/external-UML-green) </summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/technic.puml&fmt=svg)</p></details>
 
 ## Property Traits
 
@@ -81,7 +79,7 @@ There are 46 *property traits* currently in FamixNG including 38 traits modeling
 
 ## Terminal Traits
 
- They model entities that can be found in the source code such as `Functions`, `Classes`, `Exceptions`, ...
+ Terminal traits model entities that can be found in the source code such as `Functions`, `Classes`, `Exceptions`, ...
 These entities are often defined as a composition of some of the *property traits*.
 For example, `FamixTClass` is composed of: `FamixTInvocationsReceiver` (class can be receiver of static messages), `FamixTPackageable`, `FamixTType` (classes can be used to type other entities), `FamixTWithAttributes`, `FamixTWithComments`, `FamixTWithInheritances`, `FamixTWithMethods`.
 
