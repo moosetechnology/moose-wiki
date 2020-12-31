@@ -18,7 +18,6 @@ The following should nevertheless help users make sense of the more than one hun
 ## Categories of traits
 
 First, one can divide the set of traits into four categories:
-- [Categories of traits](#categories-of-traits)
 - [Association Traits](#association-traits)
 - [Technical Traits](#technical-traits)
 - [Property Traits](#property-traits)
