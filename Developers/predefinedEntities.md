@@ -1,16 +1,16 @@
 # Predefined Entities / Traits in FamixNG <!-- omit in toc -->
 
-To analyse a system in a given programming language, Moose must have a meta-model for that language.
+To analyze a system in a given programming language, Moose must have a meta-model for that language.
 For example, for Java the meta-model defines that Java programs have classes, containing methods, invoking other methods, etc.
 The meta-model describes the entities that compose a program in the given language and how they are related.
 
 On another page, we explain how to [define a meta-model](CreateNewMetamodel.md): create new entities, define relationships, properties, etc.
-On this page, we present the library of predefined entities that is part of FamixNG and helps declaring new entities by offering typical properties / relationships needed.
+On this page, we present the library of predefined entities that is part of FamixNG and helps declaring new entities by offering typical properties / relationships that are needed.
 
 In FamixNG, recurrent properties are modeled into traits.
 New entities are created as classes composed from these existing traits.
-Some common entities (like Packages) are also proposed, pre-composed with common traits.
-We list here all currently available traits.
+Some common entities (like Packages) are also proposed, precomposed with common traits.
+Here we list all currently available traits.
 
 FamixNG is still under development, and the library of available traits is subject to change.
 The following should nevertheless help users make sense of the more than one hundred traits available.
@@ -69,7 +69,7 @@ A typical `FamixTSourceAnchor` contains a filename, and start and end positions 
 Property traits model composable properties that source code entities may possess.
 Some examples are `FamixTNamedEntity` (entities that have a name), `FamixTTypedEntity` (entities that are statically typed), or a number of entities modeling ownership: `FamixTWithGlobalVariables` (entities that can own `FamixTGlobalVariables`), `FamixTWithFunctions` (entities that can own `FamixTFunctions`), ... 
 
-There are 46 *property traits* currently in FamixNG including 38 traits modeling ownership of various possible kind of entities (`FamixTWith...`).
+There are 46 *property traits* currently in FamixNG including 38 traits modeling ownership of various possible kinds of entities (`FamixTWith...`).
 
 ## Terminal Traits
 
