@@ -40,15 +40,10 @@ Using an association involves:
 - defining two classes at each end of the association (for example, Function using the trait FamixTWithAccess, and Variable using the trait FamixTAccessible).
 
 There are five full-fledged associations in FamixNG:
-- `FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`  
-<details><summary>Click to view 
-![UML](https://img.shields.io/badge/external-UML-green)</summary>
-<p>
 
-![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)
-
-</p>
-</details>
+| Association            |UML|
+|:-|:-:|
+|`FamixTAccess`, from: `FamixTWithAccess`, to: `FamixTAccessible`|<details><summary> <br>![UML](https://img.shields.io/badge/external-UML-green)</summary><p>![PlantUML Image](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/moosetechnology/moose-wiki/master/Developers/Diagrams/access.puml&fmt=svg)</p></details> |
 
 - `FamixTInheritance`, from: `FamixTWithInheritance`, to: `FamixTWithInheritance`
   [![UML](https://img.shields.io/badge/external-UML-green)](Diagrams/inheritance.png)
