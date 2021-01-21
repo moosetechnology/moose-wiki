@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: Moose wiki
 description: Analyse and model your software system
+markdown: GFM
