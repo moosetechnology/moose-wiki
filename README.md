@@ -17,6 +17,7 @@ The main Moose source code repository on GitHub is: [https://github.com/moosetec
 ## FOR USERS
 
 After installing and running Moose, one typically:
+
 1. [loads a model](#loading-a-model) of a software system to perform some analyses on it;
 1. performs some [queries](#performing-queries) on the model
 1. builds some [visualization](#visualizing-a-model) of the model
@@ -24,14 +25,15 @@ After installing and running Moose, one typically:
 ### Loading a model
 
 A popular meta-model is the Java meta-model:
+
 - [Famix Maker](https://github.com/moosetechnology/Moose-Easy)
   ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 - [Analyse Java Project](https://fuhrmanator.github.io/2019/07/29/AnalyzingJavaWithMoose.html)
   ![External documentation](https://img.shields.io/badge/-External%20Documentation-blue)
 
 You may also use models for other programming languages (see also the [Parsers](#Parsers) section):
+
 - [Importing and exporting models](Users/ImportingAndExportingModels.md)
-  ![To Review](https://img.shields.io/badge/Progress-ToReview-purple)
 - [Moose supported file format](./Users/fileFormat.md)
 
 ### Performing queries
@@ -51,7 +53,6 @@ Visualizations are built with the [Roassal tool](https://github.com/ObjectProfil
 - [Inspector](Users/inspector/inspector.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow)
 - [Meta Browser](Users/metaBrowser.md)
 
-
 ## FOR DEVELOPERS
 
 A typical development action in Moose is to add a new programming language to the ones already understood.
@@ -65,8 +66,8 @@ There are also other possible actions.
 
 ### Parsers
 
-Parsing source code to analyse is an important part of Moose.
-There are different (so called) parsers already created at various stages of progress that you can use and/or contribute to.
+Parsing source code to analyze is an important part of Moose.
+There are different (so-called) parsers already created at various stages of progress that you can use and/or contribute to.
 
 Note: they do more than parsing since they also resolve names in the parsed code and this is not a small task.
 

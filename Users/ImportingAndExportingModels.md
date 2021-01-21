@@ -1,8 +1,16 @@
-# Importing and exporting models
+# Importing and exporting models <!-- omit in toc -->
 
 The first step in the process of analysis is the generation of a model of a given target system or set of data.
 Moose can handle multiple types of data and data sources.
 This chapter provides a short guide for how to deal with these.
+
+- [Importing and exporting with MSE](#importing-and-exporting-with-mse)
+- [Importing Pharo code](#importing-pharo-code)
+  - [From GUI](#from-gui)
+  - [From code](#from-code)
+    - [Moose 8 and above](#moose-8-and-above)
+    - [Moose 7](#moose-7)
+- [Create mse file for other languages](#create-mse-file-for-other-languages)
 
 ## Importing and exporting with MSE
 
@@ -14,7 +22,7 @@ Visually, the model appears in the list of models from the Moose Panel.
 Another way is to import the model from a playground by executing (in the case of a FamixJava model):
 
 ```st
-FamixJavaModel importMSEFromStream: ('./path/to/string' asFileReference readStream).
+'./path/to/file.mse' asFileReference readStreamDo: [:stream | model := FamixJavaModel importMSEFromStream: stream].
 ```
 
 More information about MSE are available [here](./fileFormat.md#mse).
@@ -35,16 +43,73 @@ model exportToMSEStream: ('path/to/new/mseFile.mse' asFileReference writeStream)
 
 ## Importing Pharo code
 
+### From GUI
+
 Moose comes with a built-in importer for Pharo code. The prerequisite for using this importer is that you first need the target source code present in the Pharo image.
 
 Once the code is present, simply press on the ``Load from Pharo'' item from the menu of the Moose Panel, and follow the steps from the opening wizard.
 
 This importer works out of the box for code built for Pharo.
 For code written in other Smalltalk dialects, the code must first be made loadable into Pharo.
-Moose does not offer ready made solutions for these other languages, but for most known dialects, like VisualWorks, you can often find solutions for exporting the code in a file format loadable in Pharo.
+Moose does not offer ready-made solutions for these other languages, but for most known dialects, like VisualWorks, you can often find solutions for exporting the code in a file format loadable in Pharo.
 An important note is that the code does not have to be fully functioning.
 It merely needs to be loadable in the Pharo image.
 
-## Create mse file for other language
+### From code
+
+It is possible to create a model of Pharo code programmatically.
+
+#### Moose 8 and above
+
+In Moose 8, the following script creates a model of the Calypso package.
+
+```st
+"Create a Moose Model"
+model := FamixStModel new.
+
+
+MoosePharoImporterTask new
+    importerClass: SmalltalkImporter;
+    factory: SmalltalkMetamodelFactory;
+    model: model ;
+    addFromPackagesMatching: [:p | p name beginsWith: 'Calypso' ] ;
+    run;
+    yourself.
+```
+
+The model is stored inside the model variable.
+
+#### Moose 7
+
+In Moose 7, the following script creates a model of the Calypso package.
+
+```st
+"Create a Moose Model"
+model := MooseModel new.
+
+"Set the PharoSt metamodel (was fixed in Moose8)"
+model metamodel: FamixPharoSmalltalkGenerator resetMetamodel.
+model metamodel.
+
+
+MoosePharoImporterTask new
+    importerClass: SmalltalkImporter;
+    factory: SmalltalkMetamodelFactory;
+    model: model ;
+    addFromPackagesMatching: [:p | p name beginsWith: 'Calypso' ] ;
+    run;
+    yourself.
+```
+
+The model is stored inside the model variable.
+
+Then to generate the code, one also needs to perform a little hack (that has been fixed in next version of Moose).
+
+```st
+"Complexe because different metamodel, was fixed in Moose8"
+'D:/test.mse' asFileReference writeStreamDo: [ :writeStream | MooseModel export: model withMetamodel: model metamodel to: writeStream. ]
+```
+
+## Create mse file for other languages
 
 To create mse files for other programming languages please refer to the [parser section](./../README.md#Parser).
