@@ -76,7 +76,7 @@ It is similar to XML, the main difference being that instead of using verbose ta
 
 The following snippet provides an example of a small model:
 
-```mse
+```
 ((FamixJava.Namespace (id: 1)
     (name 'aNamespace'))
   (FamixJava.Package (id: 201)
