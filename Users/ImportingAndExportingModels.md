@@ -46,6 +46,20 @@ model exportToMSEStream: ('path/to/new/mseFile.mse' asFileReference writeStream)
 
 As one can import and export using MSE, it is possible to import and export using the [JSON format](./fileFormat.md#json).
 
+To import a model from a JSON format, you can execute the following snippet:
+
+```st
+myModel := '/path/to/file.json' asFileReference readStreamDo: [ :aStream |
+    (FMImporter model: FAMIXModel new) autorizeDandlingReferencesAtEnd
+            parser: FMJSONParser;
+            stream: aStream;
+            run;
+            model.            
+    ]
+```
+
+> Sugar methods will be added in future release
+
 To export using the JSON format programmatically:
 
 ```st
