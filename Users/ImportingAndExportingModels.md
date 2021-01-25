@@ -85,7 +85,7 @@ model := FamixStModel new.
 
 MoosePharoImporterTask new
     importerClass: SmalltalkImporter;
-    factory: SmalltalkMetamodelFactory;
+    factory: SmalltalkMetamodelFactory new;
     model: model ;
     addFromPackagesMatching: [:p | p name beginsWith: 'Calypso' ] ;
     run;
