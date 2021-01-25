@@ -5,6 +5,7 @@ Moose can handle multiple types of data and data sources.
 This chapter provides a short guide for how to deal with these.
 
 - [Importing and exporting with MSE](#importing-and-exporting-with-mse)
+- [Importing and exporting with JSON](#importing-and-exporting-with-json)
 - [Importing Pharo code](#importing-pharo-code)
   - [From GUI](#from-gui)
   - [From code](#from-code)
@@ -39,6 +40,20 @@ model exportToMSE.
 
 "will write the mse in mseFile.mse"
 model exportToMSEStream: ('path/to/new/mseFile.mse' asFileReference writeStream).
+```
+
+## Importing and exporting with JSON
+
+As one can import and export using MSE, it is possible to import and export using the [JSON format](./fileFormat.md#json).
+
+To export using the JSON format programmatically:
+
+```st
+"will ask where to create the json file"
+model exportToJSON.
+
+"will write the json in mseFile.json"
+'path/to/new/mseFile.json' asFileReference writeStreamDo: [:stream | model exportToJSONStream: stream ].
 ```
 
 ## Importing Pharo code
