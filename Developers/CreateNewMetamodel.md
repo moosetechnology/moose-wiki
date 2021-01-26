@@ -23,7 +23,6 @@ These are described in [another page](predefinedEntities.md) ![Unfinished](https
   - [Define remote hierarchy](#define-remote-hierarchy)
   - [Define remote relations](#define-remote-relations)
   - [Complementary information](#complementary-information)
-- [Library of predefined entities/traits](predefinedEntities.md) ![Unfinished](https://img.shields.io/badge/Progress-Unfinished-yellow.svg?style=flat).
 - [Thanks](#thanks)
 
 ## Set up
@@ -140,7 +139,7 @@ In the following we present the relations and the keywords to define them.
 
 We can now define the relations between the entities of our meta-model in the method `#defineRelations`.
 
-```
+```st
 DemoMetamodelGenerator>>#defineRelations
     super defineRelations.
     package <>-* class.
@@ -150,7 +149,7 @@ DemoMetamodelGenerator>>#defineRelations
 
 As for the definition of the entities, it is possible to define a comment for each side of the relation and to use a custom name for the accessors.
 
-```
+```st
 DemoMetamodelGenerator>>#defineRelations
     super defineRelations.
     ((package property: #classes) comment: 'The classes inside the package')
@@ -237,7 +236,7 @@ DemoMetamodelGenerator>>#defineHierarchy
 
 Finally, we define the relations between the traits.
 
-```
+```st
 DemoMetamodelGenerator>>#defineRelations
     super defineRelations.
     package <>-* class.
@@ -324,7 +323,7 @@ DemoInterfaceMetamodelGenerator>>#defineHierarchy
 
 Finally, we create the relations between the interface and the methods:
 
-```
+```st
 DemoInterfaceMetamodelGenerator>>#defineRelations
     super defineRelations.
 
