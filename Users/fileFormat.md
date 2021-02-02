@@ -1,7 +1,9 @@
 # File format <!-- omit in toc -->
 
 Moose is compatible with two file formats: JSON and MSE.
-In the following, we describe how each file must be written.
+In the following, we describe how each file must be written when **exporting a model**.
+When exporting a meta-model, additional types are automatically added (known my the meta-meta model).
+If you need to export/import a meta-model check the JSON or MSE format **and** the [Existing types](#existing-types).
 
 - [JSON](#json)
 - [MSE](#mse)
