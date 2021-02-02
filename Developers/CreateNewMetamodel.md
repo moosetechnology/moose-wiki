@@ -186,7 +186,7 @@ DemoMetamodelGenerator>>#defineProperties
        comment: 'The name of the entity'.
 ```
 
-Moose defines the following type for properties:
+Moose defines the following types for properties:
 
 - Character
 - Number
@@ -196,7 +196,7 @@ Moose defines the following type for properties:
 - Boolean
 - Object
 
-> Using the *Object*, you will not be able to export the property in *.mse* and *.json* (see: [import and export model](/Users/ImportingAndExportingModels.md)).
+> Using the *Object*, you will not be able to export the property in *.mse* and *.json* (see: [import and export model](../Users/ImportingAndExportingModels.md)).
 
 ### Generate
 
