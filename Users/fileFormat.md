@@ -1,7 +1,11 @@
-# File format
+# File format <!-- omit in toc -->
 
 Moose is compatible with two file formats: JSON and MSE.
 In the following, we describe how each file must be written.
+
+- [JSON](#json)
+- [MSE](#mse)
+- [Existing types](#existing-types)
 
 ## JSON
 
@@ -38,7 +42,6 @@ Each entity has a type (the class that will be created).
 In the file, the name of the property is the value of the property *FM3*.
 This Json property **must** be the first property of an entity.
 Whereas this does not follow JSON guidelines, it offers better performance.
-
 
 > FM3 means Fame3. It is in reference to Fame, the meta-meta-model used in Moose.
 
@@ -105,10 +108,55 @@ The following snippet provides an example of a small model:
     (superclass (ref: 2))))
 ```
 
-The file defines 8 entities: 1 Namespace, 2 Packages, 2 Classes, 1 Method, 1 Attribute and 1 Inheritance.
-For each of these entities it provides a unique identifier (_e.g._, (id: 1)) and it defines properties.
+The file defines 8 entities: 1 Namespace, 2 Packages, 2 Classes, 1 Method, 1 Attribute, and 1 Inheritance.
+For each of these entities, it provides a unique identifier (_e.g._, (id: 1)) and it defines properties.
 In general, properties can be either primitive, like (name 'aNamespace'), or they can point to another entity, like in the case of (container (ref: 1)) which denotes that the container property of ClassA points to the instance of Namespace named aNamespace.
 
 The overall object graph can be seen graphically below.
 
 ![MSE example](./mse-graph.png)
+
+## Existing types
+
+Fame (the meta-meta model used by Moose) defines the following type for properties:
+
+- Character
+- Number
+- Fraction
+- String
+- Symbol
+- Boolean
+- Object
+
+> Using the *Object*, you will not be able to export the property in *.mse* and *.json* (see: [import and export model](/Users/ImportingAndExportingModels.md)).
+
+So, when creating the *mse* or *JSON* of a meta-model these type can appear in the `ref`.
+
+For instance, for MSE, the last type reference the already Fame known *String* type.
+The same approach is used in JSON format
+
+```
+(
+  (FM3.Package (id: 1)
+    (name 'Tagging')
+    (classes
+      (FM3.Class (id: 2)
+        (name 'Category')
+        (abstract false)
+        (package (ref: 1))
+        (superclass (ref: 3))
+        (properties
+          (FM3.Property (id: 4)
+            (name 'name')
+            (class (ref: 2))
+            (container false)
+            (derived false)
+            (multivalued false)
+            (type (ref: String))
+          )
+        )
+      )
+    )
+  )
+)
+```
